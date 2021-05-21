@@ -4,10 +4,21 @@ body {
     text-align: left;
 }
 
-ul {
+#main_wrapper {
+    width: 900px;
+    margin: auto;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
     list-style: none;
-    margin: 0;
+    margin: 10px;
     padding-left: 0;
+}
+
+.nav__link {
+    padding-right: 35px;
 }
 
 a {
@@ -15,7 +26,36 @@ a {
     text-decoration: none;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#logo img {
+    width: 60px;
+    height: auto;
+}
+
 #menu {
+    font-size: bolder;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+footer {
+    background-color: #f2f2f2;
     display: flex;
     justify-content: space-around;
+}
+
+#nav__footer {
+    list-style: none;
+    padding-left: 0;
+}
+
+#conteneur {
+    display: flex;
+    justify-content: space-between;
 }
