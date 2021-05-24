@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+@import "nullstyle.scss";
 body {
-    font-size: 12px;
+    font-size: 1em;
     font-family: 'Raleway', sans-serif;
     text-align: left;
 }
 
+h1 {
+    font-size: 0, 8em;
+}
+
 #main_wrapper {
-    width: 900px;
+    width: 1199px;
     margin: auto;
 }
 
@@ -18,7 +24,7 @@ body {
 }
 
 .nav__link {
-    padding-right: 35px;
+    padding-right: 30px;
 }
 
 a {
@@ -33,7 +39,7 @@ header {
 }
 
 #logo img {
-    width: 60px;
+    width: 100px;
     height: auto;
 }
 
@@ -47,7 +53,7 @@ header {
 footer {
     background-color: #f2f2f2;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 #nav__footer {
