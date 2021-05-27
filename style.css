@@ -1,14 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
 .main-wrapper {
     font-family: "raleway", sans-serif;
+    font-size: .8em;
 }
 
 .search-form__input {
     font-family: "raleway", sans-serif;
+    font-size: .8em;
 }
 
 .search-form__button {
     font-family: "raleway", sans-serif;
+    font-size: .8em;
+}
+
+.text_bolder {
+    font-weight: bold;
+}
+
+.text {
+    font-size: .8em;
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.link-block {
+    display: block;
+    text-decoration: none;
+    color: black;
 }
 
 .logo_img {
@@ -18,4 +40,24 @@
 
 .logo {
     display: block;
+}
+
+.item-choice_images-view {
+    width: 100px;
+    height: auto;
+}
+
+.text_image-bottom {
+    background-color: burlywood;
+    width: 80px;
+    height: auto;
+}
+
+.item-choice {
+    background-color: cadetblue;
+    width: 90px;
+}
+
+.image-choice_link {
+    background-color: cornflowerblue;
 }

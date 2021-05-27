@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--lien vers css-->
     <link rel="stylesheet " href="style.css ">
+    <link rel="stylesheet" href="images/iconfonts/map-marker-alt-solid.svg">
     <title>Reservia</title>
 </head>
 
@@ -17,7 +18,7 @@
         <header class="nav-bar" role="navigation">
             <!--block,1th blexbox-->
 
-            <a href="index.html" class="logo"><img src="images/interface/Reservia@3x.png " alt="Reservia" title="Home" class="logo_img" /></a>
+            <a href="index.html" class="logo link-block"><img src="images/interface/Reservia@3x.png " alt="Reservia" title="Home" class="logo_img" /></a>
             <!--block,left-->
 
             <nav class="menu-block">
@@ -28,16 +29,16 @@
 
                     <li class="menu__item">
                         <!--element of block menu-->
-                        <a href="#" class="/">Hébergements</a> -->
+                        <a href="#" class="menu-item_link link-block text">Hébergements</a>
                     </li>
                     <li class="menu__item">
                         <!--element of block menu-->
-                        <a href="#" class="/">Activités</a>
+                        <a href="#" class="menu-item_link link-block text">Activités</a>
                     </li>
 
                     <li class="menu__item">
                         <!--element of block menu-->
-                        <a href="#" class="menu__item_subscribe"><strong role="subscription">S'inscrire</strong></a>
+                        <a href="#" class="menu__item_subscribe link-block text"><strong role="subscription">S'inscrire</strong></a>
                     </li>
                 </ul>
 
@@ -45,206 +46,297 @@
 
         </header>
 
-        <section class="search" role="search ">
-            <!--block-->
+        <main role="main">
 
-            <h1 class="title">
+            <section class="search" role="search ">
                 <!--block-->
-                Trouvez votre Hébergements pour des vacances de rêve
-            </h1>
 
-            <p class="text">
-                <!--block-->
-                En plein centre ville ou en pleine nature
-            </p>
-
-            <div class="search-block">
-                <!--block,flexbox???????-->
-
-                <form method="post" action="#" class="search-form">
+                <h1 class="title">
                     <!--block-->
-                    <button type="submit" class="search-form__button search-form__button_icon">ICON</button>
-                    <!--element of block search_form+modif icon-->
-                    <input type="search" name="search" placeholder="Marseille, France " class="search-form__input search-form__input_tap" />
-                    <!--element of block search_form+modif-->
-                    <button type="submit" class="search-form__button search-form__button__button_tap">Recherche</button>
-                    <!--element of block search_form+modif-->
+                    Trouvez votre Hébergements pour des vacances de rêve
+                </h1>
 
-
-                </form>
-            </div>
-
-
-
-
-            <div class="filters">
-                <!--block,flexbox???-->
-
-                <form class="filters-form">
+                <p class="text">
                     <!--block-->
-                    <label class="filters-form__label">Filtres</label>
-                    <button type="button" class="filters-form__button">Economique</button>
-                    <!--element of block-->
-                    <button type="button" class="filters-form__button">Familial</button>
-                    <!--element of block-->
-                    <button type="button" class="filters-form__button">Romantique</button>
-                    <!--element of block-->
-                    <button type="button" class="filters-form__button">Animaux autorisés</button>
-                    <!--element of block-->
-                </form>
-            </div>
+                    En plein centre ville ou en pleine nature
+                </p>
 
-            <div class="info-search">
-                <!--block????? -->
-                <div class="info-search__icon">ICON</div>
-                <!--e????lement of block search-info-->
+                <div class="search-block">
+                    <!--block,flexbox???????-->
 
-                <p class="info-search_text ">Plus de 500 logements sont disponibles dans cette ville</p>
-                <!--???element of block search-info with: style of block text + modificateur of block search-info-->
-            </div>
-
-        </section>
-
-        <section class="results">
-            <!--block-->
+                    <form method="post" action="#" class="search-form">
+                        <!--block-->
+                        <label for="search"><i class="fas fa-map-marker-alt"></i></label>
+                        <!--element of block search_form+modif icon-->
+                        <input type="search" name="search" placeholder="Marseille, France " class="search-form__input search-form__input_tap" />
+                        <!--element of block search_form+modif-->
+                        <button type="submit" class="search-form__button search-form__button__button_tap">Recherche</button>
+                        <!--element of block search_form+modif-->
 
 
-            <div class="heberg">
-                <!--block-->
+                    </form>
 
-                <h1 class="title head-title">Hébergements à Marseille</h1>
-                <!--block-->
-
-                <div class="choice">
-                    <!--block,flexbox-->
-                    <div class="item-choice">
-                        <!-- block--->
-                        <a href="#" class="image-choice"><img src="images/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" /></a>
-                        <!--another block-->
-                        <p class="text text_bolder">Auberge la Cannebière</p>
-                        <p class="text">Nuit à partir de 25€</p>
-                    </div>
-                    <div class="item-choice">
-                        <!-- block--->
-                        <a href="#" class="image-choice"><img src="images/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" /></a>
-                        <!--another block-->
-                        <p class="text text_bolder">Hôtel du port</p>
-                        <p class="text">Nuit à partir 52€</p>
-                    </div>
-                    <div class="item-choice">
-                        <!-- block--->
-                        <a href="#" class="image-choice"><img src="images/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" /></a>
-                        <!--another block-->
-                        <p class="text text_bolder">Hôtel Les mouettes</p>
-                        <p class="text">Nuit à partir de 76€</p>
-                    </div>
-                    <div class="item-choice">
-                        <!-- block--->
-                        <a href="#" class="image-choice"><img src="images/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" /></a>
-                        <!--another block-->
-                        <p class="text text_bolder">Hôtel de la mer</p>
-                        <p class="text">Nuit à partir de 46€</p>
-                    </div>
-                    <div class="item-choice">
-                        <!-- block--->
-                        <a href="#" class="image-choice"><img src="images/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" /></a>
-                        <!--another block-->
-                        <p class="text text_bolder">Aberge Le Panier</p>
-                        <p class="text">Nuit à partir de 96€</p>
-                    </div>
-                    <div class="item-choice">
-                        <!-- block--->
-                        <a href="#" class="image-choice"><img src="images/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" /></a>
-                        <!--another block-->
-                        <p class="text text_bolder">Hôtel chez Amina</p>
-                        <p class="text"></p>
-                    </div>
-                </div>
-                <p class="text text_bolder">Afficher plus</p>
-            </div>
-
-
-
-            <div class="pop">
-                <!--block-->
-                <div class="head-pop">
-                    <!--block-->
-                    <h1 class="head-title title">Les plus populaires</h1>
-                    <!-- block-->
-                    <p class="head-pop_icon">ICON</p>
-                    <!--block,modifier-->
-                </div>
-
-                <div class="block-pop">
-                    <!--block-->
-                    <div class="block-pop__item-choice">
-                        <!-- element of block pop-->
-                        <a href="" class="choice-image-left"><img src="images/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" /></a>
-                        <!--another block-->
-                        <p class="text text_bolder">Hôtel Le soleil du matin</p>
-                        <p class="text">Nuit à partir de 128€</p>
-
-                    </div>
-
-                    <div class="block-pop__item-choice">
-                        <!--element of block pop-->
-                        <a href="" class="choice-image-left"><img src="images/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" /></a>
-                        <!--another block-->
-                        <p class="text text_bolder">Au coeur de l'eau<br />Chambres d'hôtes</p>
-                        <p class="text">Nuit à partir de 71€</p>
-
-                    </div>
-                    <div class="block-pop__item-choice">
-                        <!--element of block pop-->
-                        <a href="" class="choice-image-left"><img src="images/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" /></a>
-                        <!--another block-->
-                        <p class="text text_bolder">Hôtel Tout bleu et Blanc</p>
-                        <p class="text">Nuit à partir de 68€</p>
-
-                    </div>
                 </div>
 
 
-            </div>
-
-        </section>
-        <section class="activ">
-            <h1 class="head-title">Activités à Marseille</h1>
 
 
+                <div class="filters">
+                    <!--block,flexbox???-->
 
-        </section>
+                    <form class="filters-form">
+                        <!--block-->
+                        <label class="filters-form__label text_bolder">Filtres</label>
+                        <button type="button" class="filters-form__button">Economique</button>
+                        <!--element of block-->
+                        <button type="button" class="filters-form__button">Familial</button>
+                        <!--element of block-->
+                        <button type="button" class="filters-form__button">Romantique</button>
+                        <!--element of block-->
+                        <button type="button" class="filters-form__button">Animaux autorisés</button>
+                        <!--element of block-->
+                    </form>
+                </div>
+
+                <div class="info-search">
+                    <!--block????? -->
+                    <div class="info-search__icon">ICON</div>
+                    <!--e????lement of block search-info-->
+
+                    <p class="info-search_text ">Plus de 500 logements sont disponibles dans cette ville</p>
+                    <!--???element of block search-info with: style of block text + modificateur of block search-info-->
+                </div>
+
+            </section>
+
+            <section class="results">
+                <!--block,flexbox heberg + activ-->
+
+
+                <div class="heberg">
+                    <!--block=choice + pop-->
+
+                    <h1 class="title head-title">Hébergements à Marseille</h1>
+                    <!--block-->
+
+                    <div class="choice">
+                        <!--block,flexbox,-->
+
+
+                        <a href="#" class="image-choice_link link-block">
+                            <!--a-block-->
+                            <figure class="item-choice">
+                                <img src="images/heberg-small/auberge-la-cannebiere.jpg" alt="Auberge la Cannebière" class="item-choice_images-view" />
+                                <figcaption class="text_image-bottom text"><b>Auberge la Cannebière</b> <br/>Nuit à partir de 25€</figcaption>
+
+                            </figure>
+                        </a>
+                        <a href="#" class="image-choice_link link-block">
+                            <!--a-block-->
+                            <figure class="item-choice">
+                                <img src="images/heberg-small/hotel-du-port.jpg" alt="Hôtel du port" class="item-choice_images-view" />
+                                <figcaption class="text_image-bottom text"><b>Hôtel du port</b> <br/>Nuit à partir de 52€</figcaption>
+
+                            </figure>
+                        </a>
+                        <a href="#" class="image-choice_link link-block">
+                            <!--a-block-->
+                            <figure class="item-choice">
+                                <img src="images/heberg-small/hotel-les-mouettes.jpg" alt="Hôtel Les mouettes" class="item-choice_images-view" />
+                                <figcaption class="text_image-bottom text"><b>Hôtel Les mouettes</b> <br/>Nuit à partir de 76€</figcaption>
+
+                            </figure>
+                        </a>
+                        <a href="#" class="image-choice_link link-block">
+                            <!--a-block-->
+                            <figure class="item-choice">
+                                <img src="images/heberg-small/hotel-de-la-mer.jpg" alt="Hôtel de la mer" class="item-choice_images-view" />
+                                <figcaption class="text_image-bottom text"><b>Hôtel de la mer</b> <br/>Nuit à partir de 46€</figcaption>
+
+                            </figure>
+                        </a>
+                        <a href="#" class="image-choice_link link-block">
+                            <!--a-block-->
+                            <figure class="item-choice">
+                                <img src="images/heberg-small/auberge-le-panier.jpg" alt="Auberge Le Panier" class="item-choice_images-view" />
+                                <figcaption class="text_image-bottom text"><b>Auberge Le Panier</b> <br/>Nuit à partir de 23€</figcaption>
+
+                            </figure>
+                        </a>
+                        <a href="#" class="image-choice_link link-block">
+                            <!--a-block-->
+                            <figure class="item-choice">
+                                <img src="images/heberg-small/hotel-chez-amina.jpg" alt="Hôtel chez Amina" class="item-choice_images-view" />
+                                <figcaption class="text_image-bottom text"><b>Hôtel chez Amina</b> <br/>Nuit à partir de 96€</figcaption>
+
+                            </figure>
+                        </a>
+
+
+
+                    </div>
+                    <p class="text text_bolder">Afficher plus</p>
+                </div>
+
+
+
+
+
+                <div class="pop">
+                    <!--block-->
+                    <div class="head-pop">
+                        <!--block-->
+                        <h1 class="head-title title">Les plus populaires</h1>
+                        <!-- block-->
+                        <p class="head-pop_icon">ICON</p>
+                        <!--block,modifier-->
+                    </div>
+
+                    <div class="block-pop">
+                        <!--block,flexbox-->
+                        <a href="#" class="image-pop_link link-block">
+                            <!--a-block-->
+                            <figure class="item-pop">
+                                <img src="images/heberg-small/hotel-le-soleil-du-matin.jpg" alt="Hôtel Le soleil du matin" class="item-pop_images-view" />
+                                <figcaption class="text_image-bottom text"><b>Hôtel Le soleil du matin</b> <br/>Nuit à partir de 128€</figcaption>
+
+                            </figure>
+                        </a>
+                        <a href="#" class="image-pop_link link-block">
+                            <!--a-block-->
+                            <figure class="item-pop">
+                                <img src="images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg" alt="Au coeur de l'eau Chambres d'hôtes" class="item-pop_images-view" />
+                                <figcaption class="text_image-bottom text"><b>Au coeur de l'eau<br />Chambres d'hôtes</b> <br/>Nuit à partir de 71€</figcaption>
+
+                            </figure>
+                        </a>
+                        <a href="#" class="image-pop_link link-block">
+
+                            <figure class="item-pop">
+                                <img src="images/heberg-small/hotel-tout-bleu-et-blanc.jpg" alt="Hôtel Tout bleu et Blanc" class="item-pop_images-view" />
+                                <figcaption class="text_image-bottom text"><b>Hôtel Tout bleu et Blanc</b> <br/>Nuit à partir de 68€</figcaption>
+
+                            </figure>
+                        </a>
+
+
+
+
+                    </div>
+
+
+                </div>
+
+            </section>
+            <section class="second">
+                <!--block-->
+                <h1 class="title head-title">Activités à Marseille</h1>
+                <!--block-->
+                <div class="block-activ">
+                    <!--block,flexbox = activ-left + activ-right -->
+
+                    <div class="activ-left">
+                        <!--block,flexbox = activ-one + activ-two-->
+                        <a href="#" class="activ-one-link link-block">
+                            <figure>
+                                <img src="images/activ-small/vieux-port.jpg" alt="Vieux port" class="item-activ-one_images-view" />
+                                <figcaption class="text_image text_bolder text">Viex port</figcaption>
+                            </figure>
+
+                        </a>
+                        <div class="activ-two">
+                            <a href="#" class="active-two_link link-block">
+                                <figure>
+                                    <img src="images/activ-small/fort-de-pomegues.jpg" alt="Fort de Pomègues" class="item-activ-two_images-view" />
+                                    <figcaption class="text_image text_bolder text">Fort de Pomègues</figcaption>
+                                </figure>
+                            </a>
+
+                            <a href="#" class="active-two_link link-block">
+                                <figure>
+                                    <img src="images/activ-small/ile-du-frioul.jpg" alt="Île de Frioul" class="item-activ-two_images-view" />
+                                    <figcaption class="text_image text_bolder text">Île de Frioul</figcaption>
+                                </figure>
+
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="activ-right">
+                        <!--block,flexbox = activ-one + activ-two-->
+                        <a href="#" class="activ-one_link link-block">
+                            <figure>
+                                <img src="images/activ-small/parc-national-des-calanques.jpg" alt="Notre-Dame-de-la-Garde" class="item-activ-one_images-view" />
+                                <figcaption class="text_image text_bolder text">Parc National des Calanques</figcaption>
+                            </figure>
+
+                        </a>
+                        <div class="activ-two">
+                            <a href="#" class="active-two_link link-block">
+                                <figure>
+                                    <img src="images/activ-small/notre-dame-de-la-garde.jpg" alt="Notre-Dame-de-la-Garde" class="item-activ-two_images-view" />
+                                    <figcaption class="text_image text_bolder text">Notre-Dame-de-la-Garde</figcaption>
+                                </figure>
+
+                            </a>
+
+                            <a href="#" class="active-two_link link-block">
+                                <figure>
+                                    <img src="images/activ-small/parc-longchamp.jpg" alt="Parc Longchamp" class="item-activ-two_images-view" />
+                                    <figcaption class="text_image text_bolder text">Parc Longchamp</figcaption>
+                                </figure>
+
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
         </main>
 
-        <>
-            <div class="conteneur-footer">
-                <!--block-->
-                <p class="title_bold">A propos</p>
-                <ul id="nav__footer ">
-                    <li><a href="# ">Fonctionnement du site</a></li>
-                    <li><a href="# ">Conditions générales de vente</a></li>
-                    <li><a href="# ">Données et confidentialité</a></li>
-                </ul>
-            </div>
-            <div>
-                <p class="footer ">Nos hébergements</p>
-                <ul id="nav__footer ">
-                    <li><a href="# ">Charte qualité</a></li>
-                    <li>
-                        <a href="# ">Soumettre votre hôtel</a></li>
 
-                </ul>
-            </div>
-            <div>
-                <p class="footer ">Assistance</p>
-                <ul id="nav__footer ">
-                    <li><a href="# ">Centre d'aide</a></li>
-                    <li><a href="# ">Nous contacter</a></li>
+        <footer>
+
+            <div class="block-footer">
+                <!--block,flexbox-->
+
+                <div class="menu-footer">
+                    <p class="text text_bolder">A propos</p>
+                    <ul class="menu">
+                        <li><a href="#" class="menu-footer_link link-block text">Fonctionnement du site</a></li>
+                        <li><a href="#" class="menu-footer_link link-block text">Conditions générales de vente</a></li>
+                        <li><a href="#" class="menu-footer_link link-block text">Données et confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-footer">
+                    <p class="text text_bolder">Nos hébergements</p>
+                    <ul class="menu">
+                        <li><a href="#" class="menu-footer_link link-block text">Charte qualité</a></li>
+                        <li><a href="#" class="menu-footer_link link-block text">Soumettre votre hôtel</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="menu-footer">
+                    <p class="text text_bolder">Assistance</p>
+                    <ul class="menu">
+                        <li><a href="#" class="menu-footer_link link-block text">Centre d'aide</a></li>
+                        <li><a href="#" class="menu-footer_link link-block text">Nous contacter</a></li>
+
+                    </ul>
+                </div>
 
 
-                </ul>
+
+
+
+
             </div>
-            </footer>
+        </footer>
     </div>
 </body>
 
