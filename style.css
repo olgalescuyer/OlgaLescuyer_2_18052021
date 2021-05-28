@@ -41,16 +41,15 @@
 }
 
 
-/*--pour les liens que j'ai fait en block (si c'est bien ou pas je n'en sais rien), je déclare le style (en général) : */
+/*--pour les liens : */
 
 .link-block {
     text-decoration: none;
     color: black;
-    background-color: ;
 }
 
 
-/* ici je déclare l'apparence qui va modifier les blocks ou les éléments= selon la methodologie BEM_modifier*/
+/* ici je déclare le style qui va modifier les blocks ou les éléments= selon la methodologie BEMb_modifier*/
 
 .text_bolder {
     font-weight: bold;
@@ -65,11 +64,6 @@
 .logo_img {
     width: 100px;
     height: auto;
-    background-color: goldenrod;
-}
-
-.menu-nav__logo {
-    background-color: maroon;
 }
 
 
@@ -85,12 +79,10 @@
 .menu-nav {
     display: flex;
     justify-content: space-between;
-    background-color: burlywood;
 }
 
 .menu-nav__item {
     padding: 20px;
-    background-color: lawngreen;
 }
 
 .menu-nav__item_subscribe {
@@ -108,12 +100,104 @@
     color: #0065FC;
 }
 
-.menu-nav__item:focus {
+.menu-nav__item:focus-within {
     cursor: pointer;
     border-top: 2px solid #0065FC;
 }
 
-.menu-nav__item:hover {
-    cursor: pointer;
-    border-top: 2px solid #0065FC;
+
+/*---------------------------section hébergement, trying----------------------------*/
+
+.image-hebrg__item_view {
+    width: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.heberg {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.image-heberg__item {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.text_image {
+    font-size: .8em;
+}
+
+.block-left,
+.block-right {
+    background-color: #F2F2F2;
+    border-radius: 10px;
+}
+
+.head-title {
+    background-color: violet;
+}
+
+
+/*---------------------------section populaire, trying----------------------------*/
+
+.head-pop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-pop__item_view {
+    width: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pop {
+    display: flex;
+    flex-direction: column;
+}
+
+.heberg .pop {
+    flex:
+}
+
+.results {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*---------------------------section activités, trying----------------------------*/
+
+.item-activ-two_images-view,
+.item-activ-one_images-view {
+    width: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.second {
+    background-color: #F2F2F2;
+    border-radius: 10px;
+}
+
+.active-two_link {
+    display: flex;
+    flex-direction: column;
+}
+
+.activ-left,
+.activ-right {
+    display: flex;
+}
+
+.activ-left {
+    background-color: turquoise
+}
+
+.block-activ {
+    display: flex;
 }
