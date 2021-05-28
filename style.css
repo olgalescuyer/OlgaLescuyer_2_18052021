@@ -1,8 +1,19 @@
+/*police*/
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
-.main-wrapper {
+
+/*toute la mise en page est incluse dans une boîte main-wrapper, je déclare l'apparence générael de la page : */
+
+#main-wrapper {
     font-family: "raleway", sans-serif;
     font-size: .8em;
+    margin: 0 auto;
+    max-width: 1199px;
+    text-align: left;
 }
+
+
+/*ainsi pour unifier les éléments de form je déclare : */
 
 .search-form__input {
     font-family: "raleway", sans-serif;
@@ -14,50 +25,95 @@
     font-size: .8em;
 }
 
-.text_bolder {
-    font-weight: bold;
-}
+
+/*ici je déclare l'apparence générale les blocks(boîtes) et les éléments : */
 
 .text {
-    font-size: .8em;
+    font-size: 1em;
 }
+
+
+/*--pour annuler les parametres par défaut de u-list : */
 
 .menu {
     list-style: none;
     padding-left: 0;
 }
 
+
+/*--pour les liens que j'ai fait en block (si c'est bien ou pas je n'en sais rien), je déclare le style (en général) : */
+
 .link-block {
-    display: block;
     text-decoration: none;
     color: black;
+    background-color: ;
 }
+
+
+/* ici je déclare l'apparence qui va modifier les blocks ou les éléments= selon la methodologie BEM_modifier*/
+
+.text_bolder {
+    font-weight: bold;
+}
+
+
+/*BARRE de navigation*/
+
+
+/*parametres de logo*/
 
 .logo_img {
     width: 100px;
     height: auto;
+    background-color: goldenrod;
 }
 
-.logo {
-    display: block;
+.menu-nav__logo {
+    background-color: maroon;
 }
 
-.item-choice_images-view {
-    width: 100px;
-    height: auto;
+
+/*comment faire pour aligner logo dans son conteneur a? : */
+
+.menu-nav__item_logo {
+    padding-right: 500px;
 }
 
-.text_image-bottom {
+
+/*je déclare flexbox de boîte "menu-nav" pour les éléments de la barre de navigation dans le header,ainsi les parametres de block: */
+
+.menu-nav {
+    display: flex;
+    justify-content: space-between;
     background-color: burlywood;
-    width: 80px;
-    height: auto;
 }
 
-.item-choice {
-    background-color: cadetblue;
-    width: 90px;
+.menu-nav__item {
+    padding: 20px;
+    background-color: lawngreen;
 }
 
-.image-choice_link {
-    background-color: cornflowerblue;
+.menu-nav__item_subscribe {
+    color: #0065FC;
+}
+
+
+/*l'apparence dinamique pour .menu-nav : */
+
+.menu-nav__item_link:focus {
+    color: #0065FC;
+}
+
+.menu-nav__item_link:hover {
+    color: #0065FC;
+}
+
+.menu-nav__item:focus {
+    cursor: pointer;
+    border-top: 2px solid #0065FC;
+}
+
+.menu-nav__item:hover {
+    cursor: pointer;
+    border-top: 2px solid #0065FC;
 }
