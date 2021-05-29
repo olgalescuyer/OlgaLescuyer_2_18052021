@@ -13,13 +13,13 @@
 
 <body>
     <div id="main-wrapper">
-        <!--BEM methodology ( Block/Element/Modifier ) trying + mise en page Flexbox,que je déclare dans css-->
+        <!--BEM methodology ( Block.Element.Modifier ) trying + mise en page Flexbox,que je déclare dans css-->
 
-        <!--barre navigation + logo-->
+        <!---------------------------------barre navigation + logo----------------------------------->
 
         <header>
 
-            <nav class="menu-nav">
+            <nav class="menu-nav" role="navigation">
                 <!--joue le role de conteneur pour Flexbox-->
 
                 <div class="menu-nav__logo">
@@ -47,6 +47,8 @@
 
         <main role="main ">
 
+            <!-----------------------------------Recherche + Filtres---------------------------------------->
+
             <section class="search " role="search ">
                 <!--block-->
 
@@ -60,79 +62,77 @@
                     En plein centre ville ou en pleine nature
                 </p>
 
-                <div class="search-block ">
-                    <!--block,flexbox???????-->
 
-                    <form method="post " action="# " class="search-form ">
-                        <!--block-->
-                        <label for="search "><i class="fas fa-map-marker-alt "></i>ICON
+
+
+                <form method="post " action="# " class="search-form ">
+                    <!--block,Flexbox-->
+                    <label for="search ">ICON
                             <input type="search " name="search " placeholder="Marseille, France " class="search-form__input search-form__input_tap " />
                         </label>
-                        <!--element of block search_form+modif icon-->
+                    <!--element of block search_form+modif icon-->
 
-                        <!--element of block search_form+modif-->
-                        <button type="submit " class="search-form__button search-form__button__button_tap ">Recherche</button>
-                        <!--element of block search_form+modif-->
+                    <!--element of block search_form+modif-->
+                    <button type="submit " class="search-form__button search-form__button__button_tap ">Recherche</button>
+                    <!--element of block search_form+modif-->
 
 
-                    </form>
-
-                </div>
+                </form>
 
 
 
 
-                <div class="filters ">
-                    <!--block,flexbox???-->
 
-                    <form class="filters-form ">
-                        <!--block-->
-                        <label class="filters-form__label text_bolder ">Filtres</label>
-                        <button type="button " class="filters-form__button ">Economique</button>
-                        <!--element of block-->
-                        <button type="button " class="filters-form__button ">Familial</button>
-                        <!--element of block-->
-                        <button type="button " class="filters-form__button ">Romantique</button>
-                        <!--element of block-->
-                        <button type="button " class="filters-form__button ">Animaux autorisés</button>
-                        <!--element of block-->
-                    </form>
-                </div>
+
+
+
+                <form class="filters-form ">
+                    <!--block, Flexbox-->
+                    <label class="filters-form__label text_bolder ">Filtres</label>
+                    <button type="button " class="filters-form__button ">Economique</button>
+                    <!--element of block-->
+                    <button type="button " class="filters-form__button ">Familial</button>
+                    <!--element of block-->
+                    <button type="button " class="filters-form__button ">Romantique</button>
+                    <!--element of block-->
+                    <button type="button " class="filters-form__button ">Animaux autorisés</button>
+                    <!--element of block-->
+                </form>
+
 
                 <div class="info-search ">
+                    <!--block,Flexbox-->
 
-                    <div class="info-search__icon ">
-                        <p>ICON</p>
-                    </div>
-
-
-                    <p class="info-search_text ">Plus de 500 logements sont disponibles dans cette ville</p>
+                    <p class="info-search__icon ">ICON</p>
+                    <p class="info-search__text ">Plus de 500 logements sont disponibles dans cette ville</p>
 
                 </div>
 
             </section>
 
-            <section class="results ">
+            <!-------------------------Hébergement à Marseille + Les plus populaires----------------------------->
+
+            <section class="content">
                 <!--block,flexbox -->
 
 
-                <div class="block-left">
+                <div class="content-left">
 
 
-                    <h1 class="title head-title ">Hébergements à Marseille</h1>
+                    <h2 class="title head-title ">Hébergements à Marseille</h2>
 
 
 
 
 
-                    <div class="heberg">
+                    <div class="content-left__box">
                         <!--block,flexbox,-->
 
 
-                        <figure class="image-heberg__item">
+                        <figure class="content-left__box_item">
                             <a href="# " class="link-block">
 
-                                <img src="images/heberg-small/auberge-la-cannebiere.jpg" alt="Auberge la Cannebière" class="image-hebrg__item_view" />
+                                <img src="images/heberg-small/auberge-la-cannebiere.jpg" alt="Auberge la Cannebière" class="image-content-left_view" />
                                 <figcaption class="text_image text"><b>Auberge la Cannebière</b> <br/>Nuit à partir de 25€</figcaption>
                             </a>
                         </figure>
@@ -141,9 +141,9 @@
 
 
 
-                        <figure class="image-heberg__item">
-                            <a href="# " class="image-choice_link link-block ">
-                                <img src="images/heberg-small/hotel-du-port.jpg " alt="Hôtel du port " class="image-hebrg__item_view" />
+                        <figure class="content-left__box_item">
+                            <a href="# " class="link-block ">
+                                <img src="images/heberg-small/hotel-du-port.jpg " alt="Hôtel du port " class="image-content-left_view" />
                                 <figcaption class="text_image text "><b>Hôtel du port</b> <br/>Nuit à partir de 52€</figcaption>
                             </a>
 
@@ -151,9 +151,9 @@
 
 
 
-                        <figure class="image-heberg__item">
-                            <a href="# " class="image-choice_link link-block ">
-                                <img src="images/heberg-small/hotel-les-mouettes.jpg " alt="Hôtel Les mouettes " class="image-hebrg__item_view" />
+                        <figure class="content-left__box_item">
+                            <a href="# " class="link-block ">
+                                <img src="images/heberg-small/hotel-les-mouettes.jpg " alt="Hôtel Les mouettes " class="image-content-left_view" />
                                 <figcaption class="text_image text "><b>Hôtel Les mouettes</b> <br/>Nuit à partir de 76€</figcaption>
                             </a>
 
@@ -161,9 +161,9 @@
 
 
 
-                        <figure class="image-heberg__item">
-                            <a href="# " class="image-choice_link link-block ">
-                                <img src="images/heberg-small/hotel-de-la-mer.jpg " alt="Hôtel de la mer " class="image-hebrg__item_view" />
+                        <figure class="content-left__box_item">
+                            <a href="# " class="link-block ">
+                                <img src="images/heberg-small/hotel-de-la-mer.jpg " alt="Hôtel de la mer " class="image-content-left_view" />
                                 <figcaption class="text_image text "><b>Hôtel de la mer</b> <br/>Nuit à partir de 46€</figcaption>
                             </a>
 
@@ -171,9 +171,9 @@
 
 
 
-                        <figure class="image-heberg__item">
-                            <a href="# " class="image-choice_link link-block ">
-                                <img src="images/heberg-small/auberge-le-panier.jpg " alt="Auberge Le Panier " class="image-hebrg__item_view" />
+                        <figure class="content-left__box_item">
+                            <a href="# " class="link-block ">
+                                <img src="images/heberg-small/auberge-le-panier.jpg " alt="Auberge Le Panier " class="image-content-left_view" />
                                 <figcaption class="text_image text "><b>Auberge Le Panier</b> <br/>Nuit à partir de 23€</figcaption>
                             </a>
 
@@ -181,9 +181,9 @@
 
 
 
-                        <figure class="image-heberg__item">
-                            <a href="# " class="image-choice_link link-block ">
-                                <img src="images/heberg-small/hotel-chez-amina.jpg " alt="Hôtel chez Amina " class="image-hebrg__item_view" />
+                        <figure class="content-left__box_item">
+                            <a href="# " class="link-block ">
+                                <img src="images/heberg-small/hotel-chez-amina.jpg " alt="Hôtel chez Amina " class="image-content-left_view" />
                                 <figcaption class="text_image text "><b>Hôtel chez Amina</b> <br/>Nuit à partir de 96€</figcaption>
                             </a>
 
@@ -193,30 +193,31 @@
 
 
                     </div>
-                    <p class="text text_bolder ">Afficher plus</p>
+                    <p class="text text_bolder p-content">Afficher plus</p>
                 </div>
 
 
 
 
 
-                <div class="block-right">
+                <div class="content-right">
                     <!--block-->
-                    <div class="head-pop">
+
+                    <div class="content-right__head-box">
                         <!--block-->
-                        <h1 class="head-title title">Les plus populaires</h1>
+                        <h2 class="head-title title">Les plus populaires</h2>
                         <!-- block-->
-                        <p class="head-pop_icon">ICON</p>
+                        <p class="content-right__head_icon">ICON</p>
                         <!--block,modifier-->
                     </div>
 
-                    <div class="pop">
+                    <div class="content-right__box">
                         <!--block,flexbox-->
 
 
-                        <figure class="image-pop__item">
-                            <a href="# " class="image-pop_link link-block ">
-                                <img src="images/heberg-small/hotel-le-soleil-du-matin.jpg " alt="Hôtel Le soleil du matin " class="image-pop__item_view " />
+                        <figure class="content-right__box_item">
+                            <a href="# " class="link-block ">
+                                <img src="images/heberg-small/hotel-le-soleil-du-matin.jpg " alt="Hôtel Le soleil du matin " class="image-content-right_view " />
                                 <figcaption class="text_image text "><b>Hôtel Le soleil du matin</b> <br/>Nuit à partir de 128€</figcaption>
                             </a>
 
@@ -224,9 +225,9 @@
 
 
 
-                        <figure class="image-pop__item">
-                            <a href="# " class="image-pop_link link-block ">
-                                <img src="images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg " alt="Au coeur de l 'eau Chambres d'hôtes " class="image-pop__item_view " />
+                        <figure class="content-right__box_item">
+                            <a href="# " class="link-block ">
+                                <img src="images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg " alt="Au coeur de l 'eau Chambres d'hôtes " class="image-content-right_view" />
                                 <figcaption class="text_image text "><b>Au coeur de l'eau<br />Chambres d'hôtes</b> <br/>Nuit à partir de 71€</figcaption>
                             </a>
 
@@ -234,9 +235,9 @@
 
 
 
-                        <figure class="image-pop__item">
-                            <a href="# " class="image-pop_link link-block ">
-                                <img src="images/heberg-small/hotel-tout-bleu-et-blanc.jpg " alt="Hôtel Tout bleu et Blanc " class="image-pop__item_view " />
+                        <figure class="content-right__box_item">
+                            <a href="# " class="link-block ">
+                                <img src="images/heberg-small/hotel-tout-bleu-et-blanc.jpg " alt="Hôtel Tout bleu et Blanc " class="image-content-right_view" />
                                 <figcaption class="text_image text "><b>Hôtel Tout bleu et Blanc</b> <br/>Nuit à partir de 68€</figcaption>
                             </a>
 
@@ -253,39 +254,41 @@
 
             </section>
 
-            <!--------------------------------ACTIVITES---------------------------------------->
-            <section class="second ">
-                <!--block-->
-                <h1 class="title head-title ">Activités à Marseille</h1>
-                <!--block-->
-                <div class="block-activ">
-                    <!--block,flexbox = activ-left + activ-right -->
+            <!------------------------------------------ACTIVITES---------------------------------------------------------->
 
-                    <div class="activ-left ">
+            <section class="secondary ">
+
+                <h2 class="title head-title ">Activités à Marseille</h2>
+
+                <div class="secondary-container">
+                    <!--block,flexbox =  +  -->
+
+                    <div class="secondary-container__box-left ">
                         <!--block,flexbox = activ-one + activ-two-->
 
-                        <figure class="activ-one-link">
+                        <figure class="one-image">
                             <a href="# " class="link-block">
-                                <img src="images/activ-small/vieux-port.jpg " alt="Vieux port " class="item-activ-one_images-view " />
+                                <img src="images/activ-small/vieux-port.jpg " alt="Vieux port " class="one-image-secondary_view " />
                                 <figcaption class="text_image text_bolder text ">Viex port</figcaption>
                             </a>
                         </figure>
 
 
-                        <div class="activ-two ">
+                        <div class="box-double-image">
+                            <!--Flexbox-->
 
-                            <figure class="activ-one-link">
+                            <figure class="two-image">
                                 <a href="# " class="link-block">
-                                    <img src="images/activ-small/fort-de-pomegues.jpg " alt="Fort de Pomègues " class="item-activ-two_images-view " />
+                                    <img src="images/activ-small/fort-de-pomegues.jpg " alt="Fort de Pomègues " class="two--image-secondary_view " />
                                     <figcaption class="text_image text_bolder text ">Fort de Pomègues</figcaption>
                                 </a>
                             </figure>
 
 
 
-                            <figure class="active-two_link ">
+                            <figure class="two-image ">
                                 <a href="# " class="link-block ">
-                                    <img src="images/activ-small/ile-du-frioul.jpg " alt="Île de Frioul " class="item-activ-two_images-view " />
+                                    <img src="images/activ-small/ile-du-frioul.jpg " alt="Île de Frioul " class="two--image-secondary_view " />
                                     <figcaption class="text_image text_bolder text ">Île de Frioul</figcaption>
                                 </a>
                             </figure>
@@ -296,22 +299,22 @@
                         </div>
                     </div>
 
-                    <div class="activ-right ">
+                    <div class="secondary-container__box-right">
                         <!--block,flexbox = activ-one + activ-two-->
 
-                        <figure class="active-two_link ">
+                        <figure class="one-image">
                             <a href="# " class="link-block ">
-                                <img src="images/activ-small/parc-national-des-calanques.jpg " alt="Notre-Dame-de-la-Garde " class="item-activ-one_images-view " />
+                                <img src="images/activ-small/parc-national-des-calanques.jpg " alt="Notre-Dame-de-la-Garde " class="one-image-secondary_view " />
                                 <figcaption class="text_image text_bolder text ">Parc National des Calanques</figcaption>
                             </a>
                         </figure>
 
 
-                        <div class="activ-two_link ">
+                        <div class="box-double-image">
 
-                            <figure class="active-two_link ">
+                            <figure class="two-image">
                                 <a href="# " class="link-block ">
-                                    <img src="images/activ-small/notre-dame-de-la-garde.jpg " alt="Notre-Dame-de-la-Garde " class="item-activ-two_images-view " />
+                                    <img src="images/activ-small/notre-dame-de-la-garde.jpg " alt="Notre-Dame-de-la-Garde " class="two--image-secondary_view  " />
                                     <figcaption class="text_image text_bolder text ">Notre-Dame-de-la-Garde</figcaption>
                                 </a>
                             </figure>
@@ -319,9 +322,9 @@
 
 
 
-                            <figure class="active-two_link">
+                            <figure class="two-image">
                                 <a href="# " class=" link-block ">
-                                    <img src="images/activ-small/parc-longchamp.jpg " alt="Parc Longchamp " class="item-activ-two_images-view " />
+                                    <img src="images/activ-small/parc-longchamp.jpg " alt="Parc Longchamp " class="two--image-secondary_view " />
                                     <figcaption class="text_image text_bolder text ">Parc Longchamp</figcaption>
                                 </a>
                             </figure>
@@ -335,45 +338,46 @@
             </section>
         </main>
 
+        <!---------------------------------------------FOOTER------------------------------------------------------>
 
-        <footer>
+        <footer class="box-footer">
 
-            <div class="block-footer ">
-                <!--block,flexbox-->
-
-                <div class="menu-footer ">
-                    <p class="text text_bolder ">A propos</p>
-                    <ul class="menu ">
-                        <li><a href="# " class="menu-footer_link link-block text ">Fonctionnement du site</a></li>
-                        <li><a href="# " class="menu-footer_link link-block text ">Conditions générales de vente</a></li>
-                        <li><a href="# " class="menu-footer_link link-block text ">Données et confidentialité</a></li>
-                    </ul>
-                </div>
-
-                <div class="menu-footer ">
-                    <p class="text text_bolder ">Nos hébergements</p>
-                    <ul class="menu ">
-                        <li><a href="# " class="menu-footer_link link-block text ">Charte qualité</a></li>
-                        <li><a href="# " class="menu-footer_link link-block text ">Soumettre votre hôtel</a></li>
-
-                    </ul>
-                </div>
-
-                <div class="menu-footer ">
-                    <p class="text text_bolder ">Assistance</p>
-                    <ul class="menu ">
-                        <li><a href="# " class="menu-footer_link link-block text ">Centre d'aide</a></li>
-                        <li><a href="# " class="menu-footer_link link-block text ">Nous contacter</a></li>
-
-                    </ul>
-                </div>
+            <!--block,flexbox-->
 
 
-
-
-
-
+            <div class="menu-footer ">
+                <p class="text text_bolder ">A propos</p>
+                <ul class="menu ">
+                    <li><a href="# " class="menu-footer_link link-block text ">Fonctionnement du site</a></li>
+                    <li><a href="# " class="menu-footer_link link-block text ">Conditions générales de vente</a></li>
+                    <li><a href="# " class="menu-footer_link link-block text ">Données et confidentialité</a></li>
+                </ul>
             </div>
+
+            <div class="menu-footer ">
+                <p class="text text_bolder ">Nos hébergements</p>
+                <ul class="menu ">
+                    <li><a href="# " class="menu-footer_link link-block text ">Charte qualité</a></li>
+                    <li><a href="# " class="menu-footer_link link-block text ">Soumettre votre hôtel</a></li>
+
+                </ul>
+            </div>
+
+            <div class="menu-footer ">
+                <p class="text text_bolder ">Assistance</p>
+                <ul class="menu ">
+                    <li><a href="# " class="menu-footer_link link-block text ">Centre d'aide</a></li>
+                    <li><a href="# " class="menu-footer_link link-block text ">Nous contacter</a></li>
+
+                </ul>
+            </div>
+
+
+
+
+
+
+
         </footer>
     </div>
 </body>
