@@ -28,11 +28,14 @@
         font-size: 1em;
     }
     /*--je déclare l'apparence générale les blocks(boîtes) et les éléments : */
-    /*--pour annuler les parametres par défaut de u-list : */
     
-    .menu {
-        list-style: none;
-        padding-left: 0;
+    .text-smaller {
+        font-size: .8em;
+    }
+    
+    .text-bolder {
+        font-weight: bold;
+        font-size: .8em;
     }
     /*--pour les liens : */
     
@@ -85,10 +88,7 @@
     
     .content-left {
         width: 75%;
-        margin-right: 10px;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
+        margin-right: 20px;
     }
     
     .content-left__box {
@@ -96,6 +96,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         border-radius: 10px;
+        background-color: margin: 0;
     }
     
     .conten-left__element {
@@ -103,114 +104,147 @@
         border-radius: 10px;
         border: 4px solid white;
         box-shadow: 1px 1px 10px 0 gray;
-        width: 200px;
+        width: 210px;
+        margin-bottom: 40px;
     }
     
     .content-left__box_image-1 {
         background: url("images/heberg-small/auberge-la-cannebiere.jpg") no-repeat;
-        background-size: 100%;
+        background-size: cover;
     }
     
     .content-left__box_image-2 {
         background: url("images/heberg-small/hotel-du-port.jpg") no-repeat;
-        background-size: 100%;
+        background-size: cover;
     }
     
     .content-left__box_image-3 {
         background: url("images/heberg-small/hotel-les-mouettes.jpg") no-repeat;
-        background-size: 100%;
+        background-size: cover;
     }
     
     .content-left__box_image-4 {
         background: url("images/heberg-small/hotel-de-la-mer.jpg") no-repeat;
-        background-size: 100%;
+        background-size: cover;
     }
     
     .content-left__box_image-5 {
         background: url("images/heberg-small/auberge-le-panier.jpg") no-repeat;
-        background-size: 100%;
+        background-size: cover;
     }
     
     .content-left__box_image-6 {
         background: url("images/heberg-small/hotel-chez-amina.jpg") no-repeat;
-        background-size: 100%;
+        background-size: cover;
     }
     
-    .text_element-image {
+    .content-left__box_text-element {
         background-color: white;
-        margin-top: 60%;
+        margin-top: 55%;
         margin-bottom: 0;
         padding-left: 10px;
         padding-right: 30px;
+        padding-bottom: 20px;
+        padding-top: 5px;
         font-size: .8em;
+    }
+    
+    .content-left__text-link {
+        margin: 0;
+        padding-top: 20px;
     }
     /*boîte à droite*/
     
-    .content-right__element {
-        background-color: white;
-        border-radius: 10px;
-        border: 4px solid white;
-        box-shadow: 1px 1px 10px 0 gray;
-        width: 200px;
-    }
-    
-    .content-right__box_image-1 {
-        background: url("images/heberg-small/hotel-le-soleil-du-matin.jpg ") no-repeat;
-        background-size: 100%;
-    }
-    
-    .content-right__box_image-2 {
-        background: url("images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg") no-repeat;
-        background-size: 100%;
-    }
-    
-    .content-right__box_image-3 {
-        background: url("images/heberg-small/hotel-tout-bleu-et-blanc.jpg") no-repeat;
-        background-size: 100%;
+    .content-right {
+        width: 25%;
+        margin-left: 20px;
     }
     
     .content-right__box {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         border-radius: 10px;
     }
     
-    .content-left,
-    .content-right {
-        background-color: #F2F2F2;
+    .content-right__element {
+        background-color: white;
         border-radius: 10px;
-    }
-    
-    .content-right {
-        width: 25%;
-        margin-left: 10px;
-    }
-    
-    .content {
+        border: 4px solid white;
+        box-shadow: 1px 1px 10px 0 gray;
+        width: 250px;
+        height: 100px;
         display: flex;
-        justify-content: space-between;
-        background-color: blueviolet;
+        justify-content: flex-end;
+        margin-bottom: 40px;
+    }
+    
+    .content-right__box_image-1 {
+        background: url("images/heberg-small/hotel-le-soleil-du-matin.jpg ") no-repeat;
+        background-size: contain;
+    }
+    
+    .content-right__box_image-2 {
+        background: url("images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg") no-repeat;
+        background-size: contain;
+    }
+    
+    .content-right__box_image-3 {
+        background: url("images/heberg-small/hotel-tout-bleu-et-blanc.jpg") no-repeat;
+        background-size: 35%;
+    }
+    
+    .content-right__box_text-element {
+        background-color: white;
+        font-size: .8em;
+        width: 60%;
+        height: 95%;
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
     }
     
     .content-right__head-box {
         display: flex;
         justify-content: space-between;
     }
-    /*supp*/
+    
+    .content-left,
+    .content-right {
+        background-color: #F2F2F2;
+        border-radius: 10px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
     
     .head-title {
-        background-color: violet;
+        margin: 0;
+        padding-bottom: 30px;
     }
+    /*supp*/
     
-    .p-content {
-        background-color: tomato;
-    }
+    .head-title {}
     /*---------------------------section activités, trying----------------------------*/
+    
+    .secondary {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
     
     .one-image-secondary_view {
         width: 200px;
         height: 300px;
+        object-fit: cover;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
@@ -218,6 +252,7 @@
     .two-image-secondary_view {
         width: 200px;
         height: 120px;
+        object-fit: cover;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
@@ -236,24 +271,35 @@
     .secondary-container__box-left,
     .secondary-container__box-right {
         display: flex;
+        justify-content: space-around;
+        width: 50%;
     }
     
     .secondary-container {
         display: flex;
+        justify-content: space-between;
+    }
+    
+    .head-title-secondary {
+        padding-left: 40px;
     }
     
     .text_image {
         padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     /*------------------------------------------FOOTER--------------------------------*/
+    /*--pour annuler les parametres par défaut de u-list : */
+    
+    .box-footer__menu {
+        list-style: none;
+        padding-left: 0;
+        width: 300px;
+    }
     
     .box-footer {
         background-color: #F2F2F2;
         display: flex;
         justify-content: space-around;
-    }
-    
-    .menu-footer {
-        padding-right: 200px;
-        background-color: aqua;
     }
