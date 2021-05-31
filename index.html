@@ -8,6 +8,7 @@
     <!--lien vers css-->
     <link rel="stylesheet " href="style.css ">
 
+
     <title>Reservia</title>
 </head>
 
@@ -38,9 +39,6 @@
                     <a href="# " class="menu-nav__item_subscribe link-block "><b>S'inscrire</b></a>
                 </div>
 
-
-
-
             </nav>
 
         </header>
@@ -57,7 +55,7 @@
                     Trouvez votre Hébergements pour des vacances de rêve
                 </h1>
 
-                <p class=" ">
+                <p>
                     <!--block-->
                     En plein centre ville ou en pleine nature
                 </p>
@@ -67,43 +65,35 @@
 
                 <form method="post " action="# " class="search-form ">
                     <!--block,Flexbox-->
-                    <label for="search ">ICON
+                    <label for="search "><span><i class="fas fa-map-marker-alt"></i></span>
                             <input type="search " name="search " placeholder="Marseille, France " class="search-form__input search-form__input_tap " />
                         </label>
                     <!--element of block search_form+modif icon-->
 
                     <!--element of block search_form+modif-->
-                    <button type="submit " class="search-form__button search-form__button__button_tap ">Recherche</button>
+                    <button type="submit " class="search-form__button search-form__button_tap ">Recherche</button>
+                    <br/><br/>
                     <!--element of block search_form+modif-->
 
 
                 </form>
+                <script src="https://kit.fontawesome.com/a1b6b0382c.js" crossorigin="anonymous"></script>
+                <form class="filtres-form">
+                    <!--block,Flexbox-->
 
+                    <b>Filters</b>
+                    <button type="submit" class="search-form__button filtres"><span></span>Economique</button>
+                    <button type="submit" class="search-form__button filtres"><span></span>Familial</button>
+                    <button type="submit" class="search-form__button filtres"><span></span>Romantique</button>
+                    <button type="submit" class="search-form__button filtres"><i class="fas fa-dog"></i><p>Animaux autorisés</p></button>
+                    <br/><br/>
 
-
-
-
-
-
-
-                <form class="filters-form ">
-                    <!--block, Flexbox-->
-                    <label class="filters-form__label text_bolder ">Filtres</label>
-                    <button type="button " class="filters-form__button ">Economique</button>
-                    <!--element of block-->
-                    <button type="button " class="filters-form__button ">Familial</button>
-                    <!--element of block-->
-                    <button type="button " class="filters-form__button ">Romantique</button>
-                    <!--element of block-->
-                    <button type="button " class="filters-form__button ">Animaux autorisés</button>
-                    <!--element of block-->
                 </form>
-
 
                 <div class="info-search ">
                     <!--block,Flexbox-->
 
-                    <p class="info-search__icon ">ICON</p>
+                    <p class="info-search__icon "><span>ICON</span></p>
                     <p class="info-search__text ">Plus de 500 logements sont disponibles dans cette ville</p>
 
                 </div>
@@ -186,7 +176,7 @@
                         <!--block-->
                         <h3 class="head-title title">Les plus populaires</h3>
                         <!-- block-->
-                        <p class="content-right__head_icon">ICON</p>
+                        <p class="content-right__head_icon"><span>ICON</span></p>
                         <!--block,modifier-->
                     </div>
 
@@ -230,7 +220,7 @@
                 <h3 class="head-title-secondary ">Activités à Marseille</h3>
 
                 <div class="secondary-container">
-                    <!--block,flexbox =  +  -->
+                    <!--block,flexbox = box-left + box-right -->
 
                     <div class="secondary-container__box-left ">
                         <!--block,flexbox = activ-one + activ-two-->
