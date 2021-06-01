@@ -85,7 +85,7 @@ body {
 }
 
 
-/*l'apparence dinamique pour .menu-nav : */
+/*l'apparence dinamique pour .menu-nav :*/
 
 .menu-nav__item_link:hover {
     color: #0065FC;
@@ -281,7 +281,7 @@ body {
     color: #F2F2F2;
 }
 
-. .content-left__text-link {
+.content-left__text-link {
     margin: 0;
     padding-top: 20px;
 }
