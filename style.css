@@ -87,11 +87,11 @@ body {
 
 /*l'apparence dinamique pour .menu-nav : */
 
-.menu-nav__item_link:focus {
+.menu-nav__item_link:hover {
     color: #0065FC;
 }
 
-.menu-nav__item_link:hover {
+.menu-nav__item_link:target {
     color: #0065FC;
 }
 
@@ -101,7 +101,7 @@ body {
 }
 
 
-/*---------------------------------------------Section search, trying----------------------------*/
+/*---------------------------------------------Section search--------------------------------------*/
 
 .search-form__button_tap {
     display: block;
@@ -113,12 +113,21 @@ body {
     padding: 10px;
 }
 
-.search-form__input {
+.search-form__input_tap {
     border-top: 2px solid #F2F2F2;
     border-bottom: 2px solid #F2F2F2;
+    border-left: 2px solid #F2F2F2;
     padding: 8px;
-    border-left: none;
     border-right: none;
+}
+
+.fa-map-marker-alt {
+    background-color: #F2F2F2;
+    padding: 11px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 18px;
+    text-align: center;
 }
 
 .search-form {
@@ -129,20 +138,34 @@ body {
 .filtres {
     display: block;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     border-radius: 40px;
     border: 2px solid #F2F2F2;
+    border-left: none;
     background-color: white;
     margin: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 10px;
+    padding-left: 0;
 }
 
-.fas {
-    border: none;
+.fa-dog,
+.fa-heart,
+.fa-money-bill-wave,
+.fa-child {
     border-radius: 40px;
-    padding: 20px;
-    margin: 0;
-    background-color: #0087fc;
+    padding: 8px;
+    background-color: #deebff;
     color: #0065FC;
+    width: 16px;
+    margin-right: 10px;
+}
+
+.fa-hover:hover {
+    background-color: #0065FC;
+    color: #F2F2F2;
+    border: none;
 }
 
 .filtres:hover {
@@ -158,28 +181,25 @@ body {
 
 .info-search {
     display: flex;
-    align-items: baseline;
+    align-items: center;
+}
+
+.fa-info {
+    color: #0065FC;
+    font-size: .6em;
+    padding: 5px;
+    width: 10px;
+    border: 2px solid #F2F2F2;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.info-search__text {
+    padding-left: 10px;
 }
 
 
-/*supp*/
-
-.button {
-    display: none;
-}
-
-label:hover {
-    background: #0065FC;
-    cursor: pointer;
-}
-
-.element {
-    display: flex;
-    align-items: baseline;
-}
-
-
-/*--------------------------------------------------Section content, trying--------------------------------------------*/
+/*--------------------------------------------------Section content--------------------------------------------*/
 
 
 /*boîte à gauche*/
@@ -195,6 +215,10 @@ label:hover {
     flex-wrap: wrap;
     border-radius: 10px;
     margin: 0;
+}
+
+.conten-left__element:hover {
+    box-shadow: 2px 2px 20px #0065FC;
 }
 
 .conten-left__element {
@@ -242,12 +266,22 @@ label:hover {
     margin-bottom: 0;
     padding-left: 10px;
     padding-right: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 0;
     padding-top: 5px;
+    font-size: .8em;
+    line-height: 1.5;
+}
+
+.fa-star {
+    color: #0065FC;
     font-size: .8em;
 }
 
-.content-left__text-link {
+.fa-star-empty {
+    color: #F2F2F2;
+}
+
+. .content-left__text-link {
     margin: 0;
     padding-top: 20px;
 }
@@ -280,6 +314,10 @@ label:hover {
     margin-bottom: 40px;
 }
 
+.content-right__element:hover {
+    box-shadow: 2px 2px 20px #0065FC;
+}
+
 .content-right__box_image-1 {
     background: url("images/heberg-small/hotel-le-soleil-du-matin.jpg ") no-repeat;
     background-size: contain;
@@ -304,12 +342,17 @@ label:hover {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
+    line-height: 1.5;
 }
 
 .content-right__head-box {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+}
+
+.fa-chart-line {
+    font-size: 1.2em;
 }
 
 .content-left,
@@ -336,7 +379,7 @@ label:hover {
 /*supp*/
 
 
-/*---------------------------section activités, trying----------------------------*/
+/*---------------------------section activités-------------------------------------------*/
 
 .secondary {
     display: flex;
@@ -353,6 +396,16 @@ label:hover {
     border-top-right-radius: 10px;
 }
 
+.image-item {
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+
+.image-item:hover {
+    box-shadow: 2px 2px 20px grey;
+}
+
 .two-image-secondary_view {
     width: 240px;
     height: 120px;
@@ -363,8 +416,17 @@ label:hover {
 
 .one-image,
 .two-image {
+    padding: 0;
     border-radius: 10px;
     box-shadow: 1px 1px 10px 0 #F2F2F2;
+}
+
+.one-image:hover {
+    background-color: #F2F2F2;
+}
+
+.two-image {
+    background-color: #F2F2F2;
 }
 
 .box-double-image {
@@ -405,11 +467,14 @@ label:hover {
 .box-footer__menu {
     list-style: none;
     padding-left: 0;
-    width: 300px;
+    width: 330px;
 }
 
+
+/*flexbox*/
+
 .box-footer {
-    background-color: #F2F2F2;
     display: flex;
     justify-content: space-around;
+    background-color: #F2F2F2;
 }
