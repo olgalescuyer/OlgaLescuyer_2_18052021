@@ -1,480 +1,442 @@
-/*police*/
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
-
-/*toute la mise en page est incluse dans une boîte main-wrapper, je déclare l'apparence générael de la page : */
-
-body {
-    font-family: "raleway", sans-serif;
-    margin: 0 auto;
-    font-size: 1em;
-}
-
-#main-wrapper {
-    max-width: 1440px;
-    text-align: left;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 1em;
-}
-
-
-/*--pour unifier les éléments de form je déclare : */
-
-.search-form__input,
-.search-form__button {
-    font-family: "raleway", sans-serif;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-
-/*--je déclare l'apparence générale les blocks(boîtes) et les éléments : */
-
-.text-smaller {
-    font-size: .8em;
-}
-
-.text-bolder {
-    font-weight: bold;
-    font-size: .8em;
-}
-
-
-/*--pour les liens : */
-
-.link-block {
-    text-decoration: none;
-    color: black;
-}
-
-
-/*--------------------------------------------BARRE de navigation---------------------------------------*/
-
-
-/*parametres de logo*/
-
-.logo_img {
-    width: 120px;
-    height: auto;
-}
-
-
-/*comment faire pour aligner logo dans son conteneur a? : */
-
-.menu-nav__item_logo {
-    padding-right: 500px;
-    margin-top: 20px;
-}
-
-
-/*je déclare flexbox de boîte "menu-nav" pour les éléments de la barre de navigation dans le header,ainsi les parametres de block: */
-
-.menu-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu-nav__item {
-    padding: 40px;
-}
-
-.menu-nav__item_subscribe {
-    color: #0065FC;
-}
-
-
-/*l'apparence dinamique pour .menu-nav :*/
-
-.menu-nav__item_link:hover {
-    color: #0065FC;
-}
-
-.menu-nav__item_link:target {
-    color: #0065FC;
-}
-
-.menu-nav__item:focus-within {
-    cursor: pointer;
-    border-top: 2px solid #0065FC;
-}
-
-
-/*---------------------------------------------Section search--------------------------------------*/
-
-.search-form__button_tap {
-    display: block;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: #0065FC;
-    border: none;
-    color: white;
-    padding: 10px;
-}
-
-.search-form__input_tap {
-    border-top: 2px solid #F2F2F2;
-    border-bottom: 2px solid #F2F2F2;
-    border-left: 2px solid #F2F2F2;
-    padding: 8px;
-    border-right: none;
-}
-
-.fa-map-marker-alt {
-    background-color: #F2F2F2;
-    padding: 11px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    width: 18px;
-    text-align: center;
-}
-
-.search-form {
-    display: flex;
-    align-items: baseline;
-}
-
-.filtres {
-    display: block;
-    display: flex;
-    align-items: center;
-    border-radius: 40px;
-    border: 2px solid #F2F2F2;
-    border-left: none;
-    background-color: white;
-    margin: 20px;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-right: 10px;
-    padding-left: 0;
-}
-
-.fa-dog,
-.fa-heart,
-.fa-money-bill-wave,
-.fa-child {
-    border-radius: 40px;
-    padding: 8px;
-    background-color: #deebff;
-    color: #0065FC;
-    width: 16px;
-    margin-right: 10px;
-}
-
-.fa-hover:hover {
-    background-color: #0065FC;
-    color: #F2F2F2;
-    border: none;
-}
-
-.filtres:hover {
-    background-color: #0065FC;
-    color: #F2F2F2;
-    border: none;
-}
-
-.filtres-form {
-    display: flex;
-    align-items: baseline;
-}
-
-.info-search {
-    display: flex;
-    align-items: center;
-}
-
-.fa-info {
-    color: #0065FC;
-    font-size: .6em;
-    padding: 5px;
-    width: 10px;
-    border: 2px solid #F2F2F2;
-    border-radius: 40px;
-    text-align: center;
-}
-
-.info-search__text {
-    padding-left: 10px;
-}
-
-
-/*--------------------------------------------------Section content--------------------------------------------*/
-
-
-/*boîte à gauche*/
-
-.content-left {
-    width: 75%;
-    margin-right: 20px;
-}
-
-.content-left__box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-radius: 10px;
-    margin: 0;
-}
-
-.conten-left__element:hover {
-    box-shadow: 2px 2px 20px #0065FC;
-}
-
-.conten-left__element {
-    background-color: white;
-    border-radius: 10px;
-    border: 4px solid white;
-    box-shadow: 1px 1px 10px 0 gray;
-    width: 210px;
-    margin-bottom: 40px;
-}
-
-.content-left__box_image-1 {
-    background: url("images/heberg-small/auberge-la-cannebiere.jpg") no-repeat;
-    background-size: cover;
-}
-
-.content-left__box_image-2 {
-    background: url("images/heberg-small/hotel-du-port.jpg") no-repeat;
-    background-size: cover;
-}
-
-.content-left__box_image-3 {
-    background: url("images/heberg-small/hotel-les-mouettes.jpg") no-repeat;
-    background-size: cover;
-}
-
-.content-left__box_image-4 {
-    background: url("images/heberg-small/hotel-de-la-mer.jpg") no-repeat;
-    background-size: cover;
-}
-
-.content-left__box_image-5 {
-    background: url("images/heberg-small/auberge-le-panier.jpg") no-repeat;
-    background-size: cover;
-}
-
-.content-left__box_image-6 {
-    background: url("images/heberg-small/hotel-chez-amina.jpg") no-repeat;
-    background-size: cover;
-}
-
-.content-left__box_text-element {
-    background-color: white;
-    margin-top: 55%;
-    margin-bottom: 0;
-    padding-left: 10px;
-    padding-right: 30px;
-    padding-bottom: 0;
-    padding-top: 5px;
-    font-size: .8em;
-    line-height: 1.5;
-}
-
-.fa-star {
-    color: #0065FC;
-    font-size: .8em;
-}
-
-.fa-star-empty {
-    color: #F2F2F2;
-}
-
-.content-left__text-link {
-    margin: 0;
-    padding-top: 20px;
-}
-
-
-/*boîte à droite*/
-
-.content-right {
-    width: 25%;
-    margin-left: 20px;
-}
-
-.content-right__box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.content-right__element {
-    background-color: white;
-    border-radius: 10px;
-    border: 4px solid white;
-    box-shadow: 1px 1px 10px 0 gray;
-    width: 250px;
-    height: 100px;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 40px;
-}
-
-.content-right__element:hover {
-    box-shadow: 2px 2px 20px #0065FC;
-}
-
-.content-right__box_image-1 {
-    background: url("images/heberg-small/hotel-le-soleil-du-matin.jpg ") no-repeat;
-    background-size: contain;
-}
-
-.content-right__box_image-2 {
-    background: url("images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg") no-repeat;
-    background-size: contain;
-}
-
-.content-right__box_image-3 {
-    background: url("images/heberg-small/hotel-tout-bleu-et-blanc.jpg") no-repeat;
-    background-size: 35%;
-}
-
-.content-right__box_text-element {
-    background-color: white;
-    font-size: .8em;
-    width: 60%;
-    height: 95%;
-    margin: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    line-height: 1.5;
-}
-
-.content-right__head-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.fa-chart-line {
-    font-size: 1.2em;
-}
-
-.content-left,
-.content-right {
-    background-color: #F2F2F2;
-    border-radius: 10px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-.content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.head-title {
-    margin: 0;
-    padding-bottom: 30px;
-}
-
-
-/*supp*/
-
-
-/*---------------------------section activités-------------------------------------------*/
-
-.secondary {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-}
-
-.one-image-secondary_view {
-    width: 240px;
-    height: 300px;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.image-item {
-    display: block;
-    border-radius: 10px;
-    margin-bottom: 0;
-}
-
-.image-item:hover {
-    box-shadow: 2px 2px 20px grey;
-}
-
-.two-image-secondary_view {
-    width: 240px;
-    height: 120px;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.one-image,
-.two-image {
-    padding: 0;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 0 #F2F2F2;
-}
-
-.one-image:hover {
-    background-color: #F2F2F2;
-}
-
-.two-image {
-    background-color: #F2F2F2;
-}
-
-.box-double-image {
-    display: flex;
-    flex-direction: column;
-}
-
-.secondary-container__box-left,
-.secondary-container__box-right {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    margin: 0;
-}
-
-.secondary-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-}
-
-.head-title-secondary {
-    padding-left: 40px;
-}
-
-.text_image {
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
-/*------------------------------------------FOOTER--------------------------------*/
-
-
-/*--pour annuler les parametres par défaut de u-list : */
-
-.box-footer__menu {
-    list-style: none;
-    padding-left: 0;
-    width: 330px;
-}
-
-
-/*flexbox*/
-
-.box-footer {
-    display: flex;
-    justify-content: space-around;
-    background-color: #F2F2F2;
-}
+    /*police : */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+    /*toute la mise en page est incluse dans une boîte main-wrapper, je déclare l'apparence générael de la page : */
+    
+    body {
+        font-family: "raleway", sans-serif;
+        margin: 0 auto;
+        font-size: 1em;
+    }
+    
+    #main-wrapper {
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 1em;
+    }
+    /*--pour unifier les éléments de form je déclare : */
+    
+    .search-form__input,
+    .search-form__button {
+        font-family: "raleway", sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    /*--je déclare l'apparence générale les blocks(boîtes) et les éléments : */
+    
+    .text-smaller {
+        font-size: .8em;
+    }
+    
+    .text-bolder {
+        font-weight: bold;
+        font-size: .8em;
+    }
+    /*--pour les liens : */
+    
+    .link-block {
+        text-decoration: none;
+        color: black;
+    }
+    /*--------------------------------------------BARRE de navigation---------------------------------------*/
+    /*--parametres de logo : */
+    
+    .logo_img {
+        width: 120px;
+        height: auto;
+    }
+    /*--<a>- je transforme en block pour faciliter l'alignement le logo par rapport à sa boîte, ainsi pour les items : */
+    
+    .menu-nav__item_logo {
+        display: block;
+        display: flex;
+        align-items: center;
+        padding-right: 500px;
+    }
+    
+    .menu-nav__item {
+        display: block;
+        border: 2px solid white;
+        padding: 40px;
+    }
+    
+    .menu-nav__item_subscribe {
+        color: #0065FC;
+    }
+    /*je déclare flexbox de boîte "menu-nav" pour les éléments de la barre de navigation dans le header : */
+    
+    .menu-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /*l'apparence dinamique pour .menu-nav : */
+    
+    .menu-nav__item:hover {
+        color: #0065FC;
+        border-top: 2px solid #0065FC;
+    }
+    /*---------------------------------------------Section search--------------------------------------*/
+    /*--la ligne de recherche : */
+    
+    .search-form__button_tap {
+        display: block;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: #0065FC;
+        border: none;
+        color: white;
+        padding: 10px;
+    }
+    
+    .search-form__input_tap {
+        border-top: 2px solid #F2F2F2;
+        border-bottom: 2px solid #F2F2F2;
+        border-left: 2px solid #F2F2F2;
+        padding: 8px;
+        border-right: none;
+    }
+    
+    .fa-map-marker-alt {
+        background-color: #F2F2F2;
+        padding: 12px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        width: 18px;
+        text-align: center;
+        position: relative;
+        left: 2%;
+    }
+    /*Flexbox : */
+    
+    .search-form {
+        display: flex;
+        align-items: baseline;
+    }
+    /*--les filters : */
+    
+    .filtres {
+        display: block;
+        display: flex;
+        align-items: center;
+        border-radius: 40px;
+        border: 2px solid #F2F2F2;
+        border-left: none;
+        background-color: white;
+        margin: 20px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 10px;
+        padding-left: 0;
+    }
+    
+    .fa-dog,
+    .fa-heart,
+    .fa-money-bill-wave,
+    .fa-child {
+        border-radius: 40px;
+        padding: 8px;
+        background-color: #deebff;
+        color: #0065FC;
+        width: 16px;
+        margin-right: 10px;
+    }
+    
+    .fa-hover:hover {
+        background-color: #0065FC;
+        color: #F2F2F2;
+    }
+    
+    .filtres:hover {
+        background-color: #0065FC;
+        color: #F2F2F2;
+    }
+    
+    .filtres-form {
+        display: flex;
+        align-items: baseline;
+    }
+    
+    .info-search {
+        display: flex;
+        align-items: center;
+    }
+    
+    .fa-info {
+        color: #0065FC;
+        font-size: .6em;
+        padding: 5px;
+        width: 10px;
+        border: 2px solid #F2F2F2;
+        border-radius: 40px;
+        text-align: center;
+    }
+    
+    .info-search__text {
+        padding-left: 10px;
+    }
+    /*--------------------------------------------------Section content--------------------------------------------*/
+    /*boîte à gauche*/
+    
+    .content-left {
+        width: 75%;
+        margin-right: 20px;
+    }
+    
+    .content-left__box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin: 0;
+    }
+    
+    .conten-left__element:hover {
+        box-shadow: 2px 2px 20px #0065FC;
+    }
+    
+    .conten-left__element {
+        background-color: white;
+        border-radius: 10px;
+        border: 4px solid white;
+        box-shadow: 1px 1px 10px 0 gray;
+        width: 210px;
+        margin-bottom: 40px;
+    }
+    
+    .content-left__box_image-1 {
+        background: url("images/heberg-small/auberge-la-cannebiere.jpg") no-repeat;
+        background-size: cover;
+    }
+    
+    .content-left__box_image-2 {
+        background: url("images/heberg-small/hotel-du-port.jpg") no-repeat;
+        background-size: cover;
+    }
+    
+    .content-left__box_image-3 {
+        background: url("images/heberg-small/hotel-les-mouettes.jpg") no-repeat;
+        background-size: cover;
+    }
+    
+    .content-left__box_image-4 {
+        background: url("images/heberg-small/hotel-de-la-mer.jpg") no-repeat;
+        background-size: cover;
+    }
+    
+    .content-left__box_image-5 {
+        background: url("images/heberg-small/auberge-le-panier.jpg") no-repeat;
+        background-size: cover;
+    }
+    
+    .content-left__box_image-6 {
+        background: url("images/heberg-small/hotel-chez-amina.jpg") no-repeat;
+        background-size: cover;
+    }
+    
+    .content-left__box_text-element {
+        background-color: white;
+        margin-top: 55%;
+        margin-bottom: 0;
+        padding-left: 10px;
+        padding-right: 30px;
+        padding-bottom: 0;
+        padding-top: 5px;
+        font-size: .8em;
+        line-height: 1.5;
+    }
+    
+    .fa-star {
+        color: #0065FC;
+        font-size: .8em;
+    }
+    
+    .fa-star-empty {
+        color: #F2F2F2;
+    }
+    
+    .content-left__text-link {
+        margin: 0;
+        padding-top: 20px;
+    }
+    /*boîte à droite*/
+    
+    .content-right {
+        width: 25%;
+        margin-left: 20px;
+    }
+    
+    .content-right__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+    }
+    
+    .content-right__element {
+        background-color: white;
+        border-radius: 10px;
+        border: 4px solid white;
+        box-shadow: 1px 1px 10px 0 gray;
+        width: 250px;
+        height: 100px;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 40px;
+    }
+    
+    .content-right__element:hover {
+        box-shadow: 2px 2px 20px #0065FC;
+    }
+    
+    .content-right__box_image-1 {
+        background: url("images/heberg-small/hotel-le-soleil-du-matin.jpg ") no-repeat;
+        background-size: contain;
+    }
+    
+    .content-right__box_image-2 {
+        background: url("images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg") no-repeat;
+        background-size: contain;
+    }
+    
+    .content-right__box_image-3 {
+        background: url("images/heberg-small/hotel-tout-bleu-et-blanc.jpg") no-repeat;
+        background-size: 35%;
+    }
+    
+    .content-right__box_text-element {
+        background-color: white;
+        font-size: .8em;
+        width: 60%;
+        height: 95%;
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        line-height: 1.5;
+    }
+    
+    .content-right__head-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    
+    .fa-chart-line {
+        font-size: 1.2em;
+    }
+    
+    .content-left,
+    .content-right {
+        background-color: #F2F2F2;
+        border-radius: 10px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    
+    .head-title {
+        margin: 0;
+        padding-bottom: 30px;
+    }
+    /*---------------------------section activités-------------------------------------------*/
+    
+    .secondary {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .one-image-secondary_view {
+        width: 240px;
+        height: 300px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .image-item {
+        display: block;
+        border-radius: 10px;
+        margin-bottom: 0;
+    }
+    
+    .image-item:hover {
+        box-shadow: 2px 2px 20px grey;
+    }
+    
+    .two-image-secondary_view {
+        width: 240px;
+        height: 120px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .one-image,
+    .two-image {
+        padding: 0;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px 0 #F2F2F2;
+    }
+    
+    .one-image:hover {
+        background-color: #F2F2F2;
+    }
+    
+    .two-image:hover {
+        background-color: #F2F2F2;
+    }
+    
+    .box-double-image {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .secondary-container__box-left,
+    .secondary-container__box-right {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin: 0;
+    }
+    
+    .secondary-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    .head-title-secondary {
+        padding-left: 40px;
+    }
+    
+    .text_image {
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    /*------------------------------------------FOOTER--------------------------------*/
+    /*--pour annuler les parametres par défaut de u-list : */
+    
+    .box-footer__menu {
+        list-style: none;
+        padding-left: 0;
+        width: 330px;
+    }
+    /*flexbox*/
+    
+    .box-footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: #F2F2F2;
+    }
