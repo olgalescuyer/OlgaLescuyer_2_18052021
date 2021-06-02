@@ -33,11 +33,15 @@
         font-weight: bold;
         font-size: .8em;
     }
-    /*--pour les liens : */
+    /*--pour les liens <a> : */
     
-    .link-block {
+    .link {
         text-decoration: none;
         color: black;
+    }
+    
+    .link-block {
+        display: block;
     }
     /*--------------------------------------------BARRE de navigation---------------------------------------*/
     /*--parametres de logo : */
@@ -46,17 +50,14 @@
         width: 120px;
         height: auto;
     }
-    /*--<a>- je transforme en block pour faciliter l'alignement le logo par rapport à sa boîte, ainsi pour les items : */
     
     .menu-nav__item_logo {
-        display: block;
         display: flex;
         align-items: center;
         padding-right: 500px;
     }
     
     .menu-nav__item {
-        display: block;
         border: 2px solid white;
         padding: 40px;
     }
@@ -116,7 +117,7 @@
     }
     /*--les filters : */
     
-    .filtres {
+    .search-form__button_filtres {
         display: block;
         display: flex;
         align-items: center;
@@ -143,12 +144,12 @@
         margin-right: 10px;
     }
     
-    .fa-hover:hover {
+    .search-form__button_filtres:hover {
         background-color: #0065FC;
         color: #F2F2F2;
     }
     
-    .filtres:hover {
+    .fa-hover:hover {
         background-color: #0065FC;
         color: #F2F2F2;
     }
@@ -192,11 +193,12 @@
         margin: 0;
     }
     
-    .conten-left__element:hover {
+    .conten-left__box-element:hover {
         box-shadow: 2px 2px 20px #0065FC;
+        transform: scale(1.1) translateY(10px);
     }
     
-    .conten-left__element {
+    .conten-left__box-element {
         background-color: white;
         border-radius: 10px;
         border: 4px solid white;
@@ -205,34 +207,40 @@
         margin-bottom: 40px;
     }
     
-    .content-left__box_image-1 {
+    .content-left__box-element_image-1 {
         background: url("images/heberg-small/auberge-la-cannebiere.jpg") no-repeat;
-        background-size: cover;
+        background-size: contain;
+        background-position: top;
     }
     
-    .content-left__box_image-2 {
+    .content-left__box-element_image-2 {
         background: url("images/heberg-small/hotel-du-port.jpg") no-repeat;
-        background-size: cover;
+        background-size: contain;
+        background-position: top;
     }
     
-    .content-left__box_image-3 {
+    .content-left__box-element_image-3 {
         background: url("images/heberg-small/hotel-les-mouettes.jpg") no-repeat;
-        background-size: cover;
+        background-size: contain;
+        background-position: top;
     }
     
-    .content-left__box_image-4 {
+    .content-left__box-element_image-4 {
         background: url("images/heberg-small/hotel-de-la-mer.jpg") no-repeat;
         background-size: cover;
+        background-position: bottom 30px right;
     }
     
-    .content-left__box_image-5 {
+    .content-left__box-element_image-5 {
         background: url("images/heberg-small/auberge-le-panier.jpg") no-repeat;
-        background-size: cover;
+        background-size: contain;
+        background-position: top;
     }
     
-    .content-left__box_image-6 {
+    .content-left__box-element_image-6 {
         background: url("images/heberg-small/hotel-chez-amina.jpg") no-repeat;
         background-size: cover;
+        background-position: 25% 75%;
     }
     
     .content-left__box_text-element {
@@ -275,7 +283,7 @@
         border-radius: 10px;
     }
     
-    .content-right__element {
+    .content-right__box-element {
         background-color: white;
         border-radius: 10px;
         border: 4px solid white;
@@ -287,23 +295,26 @@
         margin-bottom: 40px;
     }
     
-    .content-right__element:hover {
+    .content-right__box-element:hover {
         box-shadow: 2px 2px 20px #0065FC;
     }
     
-    .content-right__box_image-1 {
+    .content-right__box-element_image-1 {
         background: url("images/heberg-small/hotel-le-soleil-du-matin.jpg ") no-repeat;
         background-size: contain;
+        background-position: left;
     }
     
-    .content-right__box_image-2 {
+    .content-right__box-element_image-2 {
         background: url("images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg") no-repeat;
         background-size: contain;
+        background-position: left;
     }
     
-    .content-right__box_image-3 {
+    .content-right__box-element_image-3 {
         background: url("images/heberg-small/hotel-tout-bleu-et-blanc.jpg") no-repeat;
         background-size: 35%;
+        background-position: left;
     }
     
     .content-right__box_text-element {
@@ -364,16 +375,6 @@
         border-top-right-radius: 10px;
     }
     
-    .image-item {
-        display: block;
-        border-radius: 10px;
-        margin-bottom: 0;
-    }
-    
-    .image-item:hover {
-        box-shadow: 2px 2px 20px grey;
-    }
-    
     .two-image-secondary_view {
         width: 240px;
         height: 120px;
@@ -391,10 +392,12 @@
     
     .one-image:hover {
         background-color: #F2F2F2;
+        box-shadow: 2px 2px 20px grey;
     }
     
     .two-image:hover {
         background-color: #F2F2F2;
+        box-shadow: 2px 2px 20px grey;
     }
     
     .box-double-image {
