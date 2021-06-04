@@ -1,445 +1,555 @@
-    /*police : */
-    
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
-    /*toute la mise en page est incluse dans une boîte main-wrapper, je déclare l'apparence générael de la page : */
-    
-    body {
-        font-family: "raleway", sans-serif;
-        margin: 0 auto;
-        font-size: 1em;
-    }
-    
-    #main-wrapper {
-        text-align: left;
-        padding-left: 20px;
-        padding-right: 20px;
-        font-size: 1em;
-    }
-    /*--pour unifier les éléments de form je déclare : */
-    
-    .search-form__input,
-    .search-form__button {
-        font-family: "raleway", sans-serif;
-        font-size: 1em;
-        font-weight: bold;
-    }
-    /*--je déclare l'apparence générale les blocks(boîtes) et les éléments : */
-    
-    .text-smaller {
-        font-size: .8em;
-    }
-    
-    .text-bolder {
-        font-weight: bold;
-        font-size: .8em;
-    }
-    /*--pour les liens <a> : */
-    
-    .link {
-        text-decoration: none;
-        color: black;
-    }
-    
-    .link-block {
-        display: block;
-    }
-    /*--------------------------------------------BARRE de navigation---------------------------------------*/
-    /*--parametres de logo : */
-    
-    .logo_img {
-        width: 120px;
-        height: auto;
-    }
-    
-    .menu-nav__item_logo {
-        display: flex;
-        align-items: center;
-        padding-right: 500px;
-    }
-    
-    .menu-nav__item {
-        border: 2px solid white;
-        padding: 40px;
-    }
-    
-    .menu-nav__item_subscribe {
-        color: #0065FC;
-    }
-    /*je déclare flexbox de boîte "menu-nav" pour les éléments de la barre de navigation dans le header : */
-    
-    .menu-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    /*l'apparence dinamique pour .menu-nav : */
-    
-    .menu-nav__item:hover {
-        color: #0065FC;
-        border-top: 2px solid #0065FC;
-    }
-    /*---------------------------------------------Section search--------------------------------------*/
-    /*--la ligne de recherche : */
-    
-    .search-form__button_tap {
-        display: block;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        background-color: #0065FC;
-        border: none;
-        color: white;
-        padding: 10px;
-    }
-    
-    .search-form__input_tap {
-        border-top: 2px solid #F2F2F2;
-        border-bottom: 2px solid #F2F2F2;
-        border-left: 2px solid #F2F2F2;
-        padding: 8px;
-        border-right: none;
-    }
-    
-    .fa-map-marker-alt {
-        background-color: #F2F2F2;
-        padding: 12px;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        width: 18px;
-        text-align: center;
-        position: relative;
-        left: 2%;
-    }
-    /*Flexbox : */
-    
-    .search-form {
-        display: flex;
-        align-items: baseline;
-    }
-    /*--les filters : */
-    
-    .search-form__button_filtres {
-        display: block;
-        display: flex;
-        align-items: center;
-        border-radius: 40px;
-        border: 2px solid #F2F2F2;
-        border-left: none;
-        background-color: white;
-        margin: 20px;
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-right: 10px;
-        padding-left: 0;
-    }
-    
-    .fa-dog,
-    .fa-heart,
-    .fa-money-bill-wave,
-    .fa-child {
-        border-radius: 40px;
-        padding: 8px;
-        background-color: #deebff;
-        color: #0065FC;
-        width: 16px;
-        margin-right: 10px;
-    }
-    
-    .search-form__button_filtres:hover {
-        background-color: #0065FC;
-        color: #F2F2F2;
-    }
-    
-    .fa-hover:hover {
-        background-color: #0065FC;
-        color: #F2F2F2;
-    }
-    
-    .filtres-form {
-        display: flex;
-        align-items: baseline;
-    }
-    
-    .info-search {
-        display: flex;
-        align-items: center;
-    }
-    
-    .fa-info {
-        color: #0065FC;
-        font-size: .6em;
-        padding: 5px;
-        width: 10px;
-        border: 2px solid #F2F2F2;
-        border-radius: 40px;
-        text-align: center;
-    }
-    
-    .info-search__text {
-        padding-left: 10px;
-    }
-    /*--------------------------------------------------Section content--------------------------------------------*/
-    /*boîte à gauche*/
-    
-    .content-left {
-        width: 75%;
-        margin-right: 20px;
-    }
-    
-    .content-left__box {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        border-radius: 10px;
-        margin: 0;
-    }
-    
-    .conten-left__box-element:hover {
-        box-shadow: 2px 2px 20px #0065FC;
-        transform: scale(1.1) translateY(10px);
-    }
-    
-    .conten-left__box-element {
-        background-color: white;
-        border-radius: 10px;
-        border: 4px solid white;
-        box-shadow: 1px 1px 10px 0 gray;
-        width: 210px;
-        margin-bottom: 40px;
-    }
-    
-    .content-left__box-element_image-1 {
-        background: url("images/heberg-small/auberge-la-cannebiere.jpg") no-repeat;
-        background-size: contain;
-        background-position: top;
-    }
-    
-    .content-left__box-element_image-2 {
-        background: url("images/heberg-small/hotel-du-port.jpg") no-repeat;
-        background-size: contain;
-        background-position: top;
-    }
-    
-    .content-left__box-element_image-3 {
-        background: url("images/heberg-small/hotel-les-mouettes.jpg") no-repeat;
-        background-size: contain;
-        background-position: top;
-    }
-    
-    .content-left__box-element_image-4 {
-        background: url("images/heberg-small/hotel-de-la-mer.jpg") no-repeat;
-        background-size: cover;
-        background-position: bottom 30px right;
-    }
-    
-    .content-left__box-element_image-5 {
-        background: url("images/heberg-small/auberge-le-panier.jpg") no-repeat;
-        background-size: contain;
-        background-position: top;
-    }
-    
-    .content-left__box-element_image-6 {
-        background: url("images/heberg-small/hotel-chez-amina.jpg") no-repeat;
-        background-size: cover;
-        background-position: 25% 75%;
-    }
-    
-    .content-left__box_text-element {
-        background-color: white;
-        margin-top: 55%;
-        margin-bottom: 0;
-        padding-left: 10px;
-        padding-right: 30px;
-        padding-bottom: 0;
-        padding-top: 5px;
-        font-size: .8em;
-        line-height: 1.5;
-    }
-    
-    .fa-star {
-        color: #0065FC;
-        font-size: .8em;
-    }
-    
-    .fa-star-empty {
-        color: #F2F2F2;
-    }
-    
-    .content-left__text-link {
-        margin: 0;
-        padding-top: 20px;
-    }
-    /*boîte à droite*/
-    
-    .content-right {
-        width: 25%;
-        margin-left: 20px;
-    }
-    
-    .content-right__box {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 10px;
-    }
-    
-    .content-right__box-element {
-        background-color: white;
-        border-radius: 10px;
-        border: 4px solid white;
-        box-shadow: 1px 1px 10px 0 gray;
-        width: 250px;
-        height: 100px;
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 40px;
-    }
-    
-    .content-right__box-element:hover {
-        box-shadow: 2px 2px 20px #0065FC;
-    }
-    
-    .content-right__box-element_image-1 {
-        background: url("images/heberg-small/hotel-le-soleil-du-matin.jpg ") no-repeat;
-        background-size: contain;
-        background-position: left;
-    }
-    
-    .content-right__box-element_image-2 {
-        background: url("images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg") no-repeat;
-        background-size: contain;
-        background-position: left;
-    }
-    
-    .content-right__box-element_image-3 {
-        background: url("images/heberg-small/hotel-tout-bleu-et-blanc.jpg") no-repeat;
-        background-size: 35%;
-        background-position: left;
-    }
-    
-    .content-right__box_text-element {
-        background-color: white;
-        font-size: .8em;
-        width: 60%;
-        height: 95%;
-        margin: 0;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 5px;
-        line-height: 1.5;
-    }
-    
-    .content-right__head-box {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-    }
-    
-    .fa-chart-line {
-        font-size: 1.2em;
-    }
-    
-    .content-left,
-    .content-right {
-        background-color: #F2F2F2;
-        border-radius: 10px;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .content {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-    }
-    
-    .head-title {
-        margin: 0;
-        padding-bottom: 30px;
-    }
-    /*---------------------------section activités-------------------------------------------*/
-    
-    .secondary {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .one-image-secondary_view {
-        width: 240px;
-        height: 300px;
-        object-fit: cover;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-    
-    .two-image-secondary_view {
-        width: 240px;
-        height: 120px;
-        object-fit: cover;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-    
-    .one-image,
-    .two-image {
-        padding: 0;
-        border-radius: 10px;
-        box-shadow: 1px 1px 10px 0 #F2F2F2;
-    }
-    
-    .one-image:hover {
-        background-color: #F2F2F2;
-        box-shadow: 2px 2px 20px grey;
-    }
-    
-    .two-image:hover {
-        background-color: #F2F2F2;
-        box-shadow: 2px 2px 20px grey;
-    }
-    
-    .box-double-image {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .secondary-container__box-left,
-    .secondary-container__box-right {
-        display: flex;
-        justify-content: space-around;
-        width: 50%;
-        margin: 0;
-    }
-    
-    .secondary-container {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-    }
-    
-    .head-title-secondary {
-        padding-left: 40px;
-    }
-    
-    .text_image {
-        padding-left: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    /*------------------------------------------FOOTER--------------------------------*/
-    /*--pour annuler les parametres par défaut de u-list : */
-    
-    .box-footer__menu {
-        list-style: none;
-        padding-left: 0;
-        width: 330px;
-    }
-    /*flexbox*/
-    
-    .box-footer {
-        display: flex;
-        justify-content: space-around;
-        background-color: #F2F2F2;
-    }
+                              /*police : */
+                              
+                              @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+                              /*toute la mise en page est incluse dans une boîte main-wrapper, je déclare l'apparence générael de la page : */
+                              
+                              * {
+                                  box-sizing: border-box;
+                              }
+                              
+                              body {
+                                  font-family: "raleway", sans-serif;
+                              }
+                              
+                              .main-wrapper {
+                                  display: flex;
+                                  flex-direction: column;
+                                  overflow: hidden;
+                                  min-height: 100%;
+                                  margin: 0 auto;
+                                  padding-left: 3.5%;
+                                  padding-right: 3.5%;
+                                  max-width: 1440px;
+                                  font-family: "raleway", sans-serif;
+                              }
+                              /*--pour unifier les éléments de form je déclare : */
+                              
+                              .search-form__input,
+                              .search-form__button {
+                                  font-family: "raleway", sans-serif;
+                                  font-size: 1em;
+                                  font-weight: bold;
+                              }
+                              /*--je déclare l'apparence générale les blocks(boîtes) et les éléments : */
+                              
+                              .text-smaller {
+                                  font-size: .8em;
+                              }
+                              
+                              .text-bolder {
+                                  font-weight: bold;
+                                  font-size: .8em;
+                              }
+                              /*--pour les liens <a> : */
+                              
+                              .link {
+                                  text-decoration: none;
+                                  color: black;
+                              }
+                              
+                              .link-block {
+                                  display: block;
+                              }
+                              /*--------------------------------------------BARRE de navigation---------------------------------------*/
+                              /*--parametres de logo : */
+                              
+                              .logo_img {
+                                  width: 120px;
+                                  height: auto;
+                              }
+                              
+                              .menu-nav__item_logo {
+                                  display: flex;
+                                  align-items: center;
+                                  padding-right: 500px;
+                              }
+                              
+                              .menu-nav__item {
+                                  border: 2px solid white;
+                                  padding: 40px;
+                              }
+                              
+                              .menu-nav__item_subscribe {
+                                  color: #0065FC;
+                              }
+                              /*je déclare flexbox de boîte "menu-nav" pour les éléments de la barre de navigation dans le header : */
+                              
+                              .menu-nav {
+                                  display: flex;
+                                  justify-content: space-between;
+                                  align-items: center;
+                              }
+                              /*l'apparence dinamique pour .menu-nav : */
+                              
+                              .menu-nav__item:hover {
+                                  color: #0065FC;
+                                  border-top: 2px solid #0065FC;
+                              }
+                              /*---------------------------------------------Section search--------------------------------------*/
+                              
+                              .title-1,
+                              .title-2 {
+                                  margin: 0;
+                              }
+                              
+                              .title-2 {
+                                  padding: 1% 0 3%;
+                              }
+                              /*--la ligne de recherche : */
+                              
+                              .search {
+                                  display: flex;
+                                  flex-direction: column;
+                                  margin: 0;
+                              }
+                              
+                              .search-form__button_tap {
+                                  display: block;
+                                  border-top-right-radius: 20px;
+                                  border-bottom-right-radius: 20px;
+                                  background-color: #0065FC;
+                                  border: none;
+                                  color: white;
+                                  padding: 10px;
+                              }
+                              
+                              .search-form__input_tap {
+                                  border-top: 2px solid #F2F2F2;
+                                  border-bottom: 2px solid #F2F2F2;
+                                  border-left: 2px solid #F2F2F2;
+                                  padding: 8px;
+                                  border-right: none;
+                              }
+                              
+                              .input {
+                                  display: inline-block;
+                                  display: flex;
+                              }
+                              
+                              .fa-map-marker-alt {
+                                  background-color: #F2F2F2;
+                                  padding: 12px;
+                                  border-top-left-radius: 20px;
+                                  border-bottom-left-radius: 20px;
+                              }
+                              /*Flexbox : */
+                              
+                              .search-form {
+                                  display: flex;
+                                  align-items: center;
+                              }
+                              /*--les filters : */
+                              
+                              .search-form__button_filtres {
+                                  display: flex;
+                                  align-items: baseline;
+                                  border-radius: 40px;
+                                  border: 2px solid #F2F2F2;
+                                  border-left: none;
+                                  background-color: white;
+                                  padding: 0;
+                                  margin-left: 3%;
+                                  padding-right: 1.8%;
+                              }
+                              
+                              .fa-dog,
+                              .fa-heart,
+                              .fa-money-bill-wave,
+                              .fa-child {
+                                  border-radius: 50px;
+                                  background-color: #deebff;
+                                  color: #0065FC;
+                                  margin-right: 14px;
+                                  padding: 10px;
+                                  width: 37px;
+                              }
+                              
+                              .search-form__button_filtres:hover {
+                                  background-color: #0065FC;
+                                  color: #F2F2F2;
+                                  transform: scale(1.1);
+                              }
+                              
+                              .search-form__button_filtres:hover>.fa-hover {
+                                  background-color: #0065FC;
+                                  color: #F2F2F2;
+                                  padding-left: 15px;
+                              }
+                              
+                              .filtres-form {
+                                  display: flex;
+                                  align-items: baseline;
+                                  margin-top: 2.5%;
+                              }
+                              
+                              .info-search__text {
+                                  margin: 0;
+                                  padding: 3% 0;
+                              }
+                              
+                              .fa-info {
+                                  color: #0065FC;
+                                  border: 2px solid #F2F2F2;
+                                  margin-right: 3%;
+                                  font-size: .8em;
+                                  width: 20px;
+                                  height: 20px;
+                                  border-radius: 50%;
+                                  padding: 3px;
+                                  padding-left: 5px;
+                              }
+                              /*--------------------------------------------------Section content--------------------------------------------*/
+                              
+                              .content {
+                                  display: flex;
+                                  justify-content: space-between;
+                                  max-width: 1440px;
+                                  margin: 0px auto;
+                              }
+                              /*boîte à gauche*/
+                              
+                              .content-left {
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: space-between;
+                                  flex: 65%;
+                                  margin-right: 1.7%;
+                              }
+                              
+                              .content-left__box {
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: space-between;
+                                  border-radius: 10%;
+                                  margin: 0;
+                              }
+                              
+                              .content-left__box-1,
+                              .content-left__box-2 {
+                                  display: flex;
+                                  justify-content: space-between;
+                              }
+                              
+                              .conten-left__box-element:hover {
+                                  box-shadow: 2px 2px 20px #0065FC;
+                              }
+                              
+                              .conten-left__box-element {
+                                  background-color: white;
+                                  border-radius: 10px;
+                                  border: 4px solid white;
+                                  box-shadow: 1px 1px 10px 0 gray;
+                                  margin: 7%;
+                              }
+                              
+                              .left-box-item {
+                                  margin: 0;
+                                  flex: 0 1 33.333%;
+                              }
+                              
+                              .content-left__box-element_image-1 {
+                                  background: url("images/heberg-small/auberge-la-cannebiere.jpg") no-repeat;
+                                  background-size: contain;
+                                  background-position: top;
+                              }
+                              
+                              .content-left__box-element_image-2 {
+                                  background: url("images/heberg-small/hotel-du-port.jpg") no-repeat;
+                                  background-size: contain;
+                                  background-position: top;
+                              }
+                              
+                              .content-left__box-element_image-3 {
+                                  background: url("images/heberg-small/hotel-les-mouettes.jpg") no-repeat;
+                                  background-size: contain;
+                                  background-position: top;
+                              }
+                              
+                              .content-left__box-element_image-4 {
+                                  background: url("images/heberg-small/hotel-de-la-mer.jpg") no-repeat;
+                                  background-size: cover;
+                                  background-position: bottom 30px right;
+                              }
+                              
+                              .content-left__box-element_image-5 {
+                                  background: url("images/heberg-small/auberge-le-panier.jpg") no-repeat;
+                                  background-size: contain;
+                                  background-position: top;
+                              }
+                              
+                              .content-left__box-element_image-6 {
+                                  background: url("images/heberg-small/hotel-chez-amina.jpg") no-repeat;
+                                  background-size: cover;
+                                  background-position: 25% 75%;
+                              }
+                              /*--les étoiles pour tout le mond*/
+                              
+                              .fa-star {
+                                  color: #0065FC;
+                                  font-size: .8em;
+                              }
+                              
+                              .fa-star-empty {
+                                  color: #F2F2F2;
+                              }
+                              /*--"Polaroid" = price + name des hôtels*/
+                              
+                              .content-left__box_text-element {
+                                  background-color: white;
+                                  margin-top: 55%;
+                                  margin-bottom: 0;
+                                  font-size: .8em;
+                                  line-height: 1.5;
+                              }
+                              
+                              .content-left__text-link {
+                                  margin: 0;
+                                  padding-top: 3.5%;
+                                  padding-left: 2.5%;
+                              }
+                              /*boîte à droite*/
+                              
+                              .content-right {
+                                  flex: 25%;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: space-between;
+                                  margin-left: 1.7%;
+                              }
+                              
+                              .content-right__box {
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: space-between;
+                                  height: 100%;
+                              }
+                              
+                              .content-right__box-element {
+                                  background-color: white;
+                                  border-radius: 10px;
+                                  border: 4px solid white;
+                                  box-shadow: 1px 1px 10px 0 gray;
+                                  display: flex;
+                                  justify-content: flex-end;
+                                  margin-top: 12%;
+                                  width: 100%;
+                              }
+                              
+                              .content-right__box-element:hover {
+                                  box-shadow: 2px 2px 20px #0065FC;
+                              }
+                              
+                              .content-right__box-element_image-1 {
+                                  background: url("images/heberg-small/hotel-le-soleil-du-matin.jpg ") no-repeat;
+                                  background-size: cover;
+                                  background-position: left;
+                              }
+                              
+                              .content-right__box-element_image-2 {
+                                  background: url("images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg") no-repeat;
+                                  background-size: cover;
+                                  background-position: left 35% top 45%;
+                                  ;
+                              }
+                              
+                              .content-right__box-element_image-3 {
+                                  background: url("images/heberg-small/hotel-tout-bleu-et-blanc.jpg") no-repeat;
+                                  background-size: cover;
+                                  background-position: left;
+                              }
+                              
+                              .content-right__box_text-element {
+                                  background-color: white;
+                                  font-size: .8em;
+                                  width: 60%;
+                                  margin: 0;
+                                  line-height: 1.5;
+                              }
+                              
+                              .fa-chart-line {
+                                  font-size: 1.2em;
+                                  margin-left: 0.02%;
+                                  display: inline-block;
+                              }
+                              
+                              .content_head-title_box {
+                                  display: flex;
+                                  justify-content: space-between;
+                                  position: relative;
+                                  right: 2%;
+                              }
+                              
+                              .content-left {
+                                  background-color: #F2F2F2;
+                                  border-radius: 10px;
+                                  padding: 1.87%;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: space-between;
+                              }
+                              
+                              .content-right {
+                                  background-color: #F2F2F2;
+                                  border-radius: 10px;
+                                  padding: 2.99%;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: space-between;
+                              }
+                              
+                              .content_head-title {
+                                  margin: 0;
+                                  padding-left: 2.5%;
+                                  padding-bottom: 1.8%;
+                                  padding-top: 1.8%;
+                              }
+                              /*---------------------------section activités-------------------------------------------*/
+                              
+                              .secondary {
+                                  display: flex;
+                                  flex-direction: column;
+                                  margin: 0;
+                                  padding-bottom: 4.5%;
+                                  max-width: 1440px;
+                              }
+                              
+                              .secondary_head-title {
+                                  margin: 0;
+                                  padding-left: 0;
+                                  text-align: left;
+                                  padding: 4.3% 0 2.3% 0;
+                              }
+                              
+                              .secondary__box-element {
+                                  height: 100%;
+                                  display: flex;
+                                  align-items: flex-end;
+                                  border-radius: 10px;
+                                  box-shadow: 1px 1px 10px 0 #F2F2F2;
+                                  display: flex;
+                                  align-items: flex-end;
+                              }
+                              
+                              .secondary__box-element_image-big-1 {
+                                  background: url("images/activ-small/vieux-port.jpg") no-repeat;
+                                  background-size: cover;
+                              }
+                              
+                              .secondary__box-element_image-small-1 {
+                                  background: url("images/activ-small/fort-de-pomegues.jpg") no-repeat;
+                                  background-size: cover;
+                                  background-position: center;
+                              }
+                              
+                              .secondary__box-element_image-small-2 {
+                                  background: url("images/activ-small/ile-du-frioul.jpg") no-repeat;
+                                  background-size: cover;
+                                  background-position: center;
+                              }
+                              
+                              .secondary__box-element_image-big-2 {
+                                  background: url("images/activ-small/parc-national-des-calanques.jpg ") no-repeat;
+                                  background-size: cover;
+                              }
+                              
+                              .secondary__box-element_image-small-3 {
+                                  background: url("images/activ-small/notre-dame-de-la-garde.jpg") no-repeat;
+                                  background-size: cover;
+                              }
+                              
+                              .secondary__box-element_image-small-4 {
+                                  background: url("images/activ-small/parc-longchamp.jpg") no-repeat;
+                                  background-size: cover;
+                              }
+                              
+                              .secondary__box_text-element {
+                                  width: 100%;
+                                  background-color: white;
+                                  margin-top: 60%;
+                                  margin-bottom: 0;
+                                  padding: 5%;
+                                  border-bottom-left-radius: 10px;
+                                  border-bottom-right-radius: 10px;
+                              }
+                              
+                              .one-image,
+                              .two-image {
+                                  padding: 0;
+                                  border-radius: 10px;
+                              }
+                              
+                              .one-image {
+                                  width: 50%;
+                                  margin-right: 3%;
+                              }
+                              
+                              .secondary__box-element:hover {
+                                  box-shadow: 2px 2px 20px grey;
+                              }
+                              
+                              .secondary__box-element:hover>.secondary__box_text-element {
+                                  background-color: #F2F2F2;
+                              }
+                              
+                              .box-double-image {
+                                  display: flex;
+                                  flex-direction: column;
+                                  width: 50%;
+                                  margin-left: 3%;
+                              }
+                              /*supp*/
+                              
+                              .item-1 {
+                                  height: 70%;
+                                  margin-bottom: 12%;
+                              }
+                              
+                              .item-2 {
+                                  height: 30%;
+                              }
+                              
+                              .item-3 {
+                                  height: 40%;
+                                  margin-bottom: 12%;
+                              }
+                              
+                              .item-4 {
+                                  height: 60%;
+                              }
+                              
+                              .secondary-container__box-left,
+                              .secondary-container__box-right {
+                                  display: flex;
+                                  justify-content: space-between;
+                                  margin: 0;
+                                  width: 50%;
+                              }
+                              
+                              .secondary-container__box-left {
+                                  margin-right: 1.5%;
+                              }
+                              
+                              .secondary-container__box-right {
+                                  margin-left: 1.5%;
+                              }
+                              
+                              .secondary-container {
+                                  display: flex;
+                                  justify-content: space-between;
+                                  margin: 0;
+                              }
+                              /*------------------------------------------FOOTER--------------------------------*/
+                              /*--pour annuler les parametres par défaut de u-list : */
+                              
+                              .box-footer__menu {
+                                  list-style: none;
+                                  padding-left: 0;
+                                  width: 330px;
+                              }
+                              /*flexbox*/
+                              
+                              .box-footer {
+                                  display: flex;
+                                  justify-content: space-around;
+                                  background-color: #F2F2F2;
+                              }
