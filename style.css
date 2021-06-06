@@ -1,701 +1,686 @@
-                                                      /*police : */
-                                                      
-                                                      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
-                                                      /*toute la mise en page est incluse dans une boîte main-wrapper, je déclare l'apparence générael de la page : */
-                                                      
-                                                      * {
-                                                          box-sizing: border-box;
-                                                      }
-                                                      
-                                                      body {
-                                                          font-family: "raleway", sans-serif;
-                                                          margin: 0;
-                                                      }
-                                                      
-                                                      .main-wrapper {
-                                                          display: flex;
-                                                          flex-direction: column;
-                                                          overflow: hidden;
-                                                          min-height: 100%;
-                                                          margin: 0 auto;
-                                                          padding-left: 3.5%;
-                                                          padding-right: 3.5%;
-                                                      }
-                                                      
-                                                      @media (max-width:767px) {
-                                                          .main-wrapper {
-                                                              padding: 0;
-                                                              margin: 0;
-                                                          }
-                                                      }
-                                                      /*--pour unifier les éléments de <form> je déclare : */
-                                                      
-                                                      .search-form__input,
-                                                      .search-form__button {
-                                                          font-family: "raleway", sans-serif;
-                                                          font-size: 1em;
-                                                          font-weight: bold;
-                                                      }
-                                                      
-                                                      .search-form__input {
-                                                          outline: none;
-                                                      }
-                                                      /*--je déclare l'apparence générale les blocks(boîtes) et les éléments : */
-                                                      
-                                                      .text-smaller {
-                                                          font-size: .8em;
-                                                      }
-                                                      
-                                                      .text-bolder {
-                                                          font-weight: bold;
-                                                          font-size: .8em;
-                                                      }
-                                                      /*--pour les liens <a> : */
-                                                      
-                                                      .link {
-                                                          text-decoration: none;
-                                                          color: black;
-                                                      }
-                                                      
-                                                      .link-block {
-                                                          display: block;
-                                                      }
-                                                      /*--------------------------------------------BARRE de navigation---------------------------------------*/
-                                                      
-                                                      @media (max-width:767px) {
-                                                          .container-header {
-                                                              max-width: 767px;
-                                                          }
-                                                          .menu-nav-box {
-                                                              display: flex;
-                                                              flex-wrap: wrap;
-                                                              width: 100%;
-                                                          }
-                                                          .menu-nav__item_logo {
-                                                              width: 50%;
-                                                          }
-                                                      }
-                                                      /*--parametres de logo : */
-                                                      
-                                                      .logo_img {
-                                                          width: 15%;
-                                                          height: auto;
-                                                      }
-                                                      
-                                                      .menu-nav__item_logo {
-                                                          display: flex;
-                                                          align-items: center;
-                                                          margin: 0;
-                                                          padding: 1.5% 0;
-                                                          width: 75%;
-                                                          background-color: bisque;
-                                                      }
-                                                      
-                                                      .menu-nav__item {
-                                                          border: 2px solid white;
-                                                          padding: 10% 3.5%;
-                                                          height: 100%;
-                                                          width: 100%;
-                                                          text-align: center;
-                                                      }
-                                                      
-                                                      .menu-nav__item_subscribe {
-                                                          color: #0065FC;
-                                                      }
-                                                      /*je déclare flexbox de boîte "menu-nav" pour les éléments de la barre de navigation dans le header : */
-                                                      
-                                                      .menu-nav {
-                                                          display: flex;
-                                                          justify-content: space-between;
-                                                          align-items: center;
-                                                          padding: 0;
-                                                          width: 25%;
-                                                          flex: 1 2 33.333%;
-                                                      }
-                                                      
-                                                      .menu-nav-box {
-                                                          display: flex;
-                                                      }
-                                                      /*l'apparence dinamique pour .menu-nav : */
-                                                      
-                                                      .menu-nav__item:hover {
-                                                          color: #0065FC;
-                                                          border-top: 2px solid #0065FC;
-                                                      }
-                                                      /*---------------------------------------------Section search--------------------------------------*/
-                                                      
-                                                      .head-title__search_title,
-                                                      .head-title__search_text {
-                                                          margin: 0;
-                                                      }
-                                                      
-                                                      .head-title__search_text {
-                                                          padding: 1% 0 3%;
-                                                      }
-                                                      /*--la ligne de recherche : */
-                                                      
-                                                      .search {
-                                                          display: flex;
-                                                          flex-direction: column;
-                                                          margin: 0;
-                                                      }
-                                                      
-                                                      .search-form__button_tap {
-                                                          display: block;
-                                                          border-top-right-radius: 20px;
-                                                          border-bottom-right-radius: 20px;
-                                                          background-color: #0065FC;
-                                                          border: none;
-                                                          color: white;
-                                                          padding: 10px;
-                                                      }
-                                                      
-                                                      .search-form__input_tap {
-                                                          border-top: 2px solid #F2F2F2;
-                                                          border-bottom: 2px solid #F2F2F2;
-                                                          border-left: 2px solid #F2F2F2;
-                                                          padding: 8px;
-                                                          border-right: none;
-                                                      }
-                                                      
-                                                      .label-input {
-                                                          display: inline-block;
-                                                          display: flex;
-                                                          align-items: baseline;
-                                                      }
-                                                      
-                                                      .label-input:hover {
-                                                          background-color: #deebff;
-                                                          border-radius: 20px;
-                                                      }
-                                                      
-                                                      .label-input:hover>.search-form__input_tap {
-                                                          background-color: #deebff;
-                                                          color: #0065FC;
-                                                          border-color: #deebff;
-                                                      }
-                                                      
-                                                      .label-input:hover>.fa-map-marker-alt {
-                                                          background-color: #deebff;
-                                                          color: #0065FC;
-                                                          border-color: #deebff;
-                                                      }
-                                                      
-                                                      .fa-map-marker-alt {
-                                                          background-color: #F2F2F2;
-                                                          text-align: center;
-                                                          width: 32px;
-                                                          padding: 12px 12px;
-                                                          border-top-left-radius: 20px;
-                                                          border-bottom-left-radius: 20px;
-                                                      }
-                                                      /*Flexbox : */
-                                                      
-                                                      .search-form {
-                                                          display: flex;
-                                                          align-items: center;
-                                                      }
-                                                      /*--les filters : */
-                                                      
-                                                      .search-form__button_filtres {
-                                                          display: flex;
-                                                          align-items: baseline;
-                                                          border-radius: 40px;
-                                                          border: 2px solid #F2F2F2;
-                                                          border-left: none;
-                                                          background-color: white;
-                                                          padding: 0;
-                                                          margin-left: 3%;
-                                                          padding-right: 1.8%;
-                                                      }
-                                                      
-                                                      .fa-dog,
-                                                      .fa-heart,
-                                                      .fa-money-bill-wave,
-                                                      .fa-child {
-                                                          border-radius: 50px;
-                                                          background-color: #deebff;
-                                                          color: #0065FC;
-                                                          margin-right: 14px;
-                                                          padding: 10px;
-                                                          width: 37px;
-                                                      }
-                                                      
-                                                      .search-form__button_filtres:hover {
-                                                          background-color: #0065FC;
-                                                          color: #F2F2F2;
-                                                          transform: scale(1.1);
-                                                      }
-                                                      
-                                                      .search-form__button_filtres:hover>.fa-hover {
-                                                          background-color: #0065FC;
-                                                          color: #F2F2F2;
-                                                          padding-left: 15px;
-                                                      }
-                                                      
-                                                      .filtres-form {
-                                                          display: flex;
-                                                          align-items: baseline;
-                                                          margin-top: 2.5%;
-                                                      }
-                                                      
-                                                      .info-search__text {
-                                                          margin: 0;
-                                                          padding: 3% 0;
-                                                      }
-                                                      
-                                                      .fa-info {
-                                                          color: #0065FC;
-                                                          border: 2px solid #F2F2F2;
-                                                          margin-right: 3%;
-                                                          font-size: .8em;
-                                                          width: 20px;
-                                                          height: 20px;
-                                                          border-radius: 50%;
-                                                          padding: 3px;
-                                                          padding-left: 5px;
-                                                      }
-                                                      /*--------------------------------------------------Section content--------------------------------------------*/
-                                                      
-                                                      .content {
-                                                          display: flex;
-                                                          justify-content: space-between;
-                                                          margin: 0px auto;
-                                                          max-width: 1440px;
-                                                      }
-                                                      
-                                                      @media screen and (max-width:1440px) {
-                                                          .content {
-                                                              max-width: 970px;
-                                                          }
-                                                      }
-                                                      
-                                                      @media screen and (max-width:992px) {
-                                                          .content {
-                                                              max-width: 750px;
-                                                          }
-                                                      }
-                                                      /*---IPad--*/
-                                                      
-                                                      @media screen and (max-width:768px) {
-                                                          .container-content {
-                                                              max-width: none;
-                                                              padding: 0;
-                                                          }
-                                                          .title {
-                                                              font-size: .8em;
-                                                          }
-                                                          .text {
-                                                              font-size: .6em;
-                                                          }
-                                                          .content {
-                                                              display: flex;
-                                                              flex-direction: column-reverse;
-                                                              justify-content: space-between;
-                                                          }
-                                                          .content-left__box-1,
-                                                          .content-left__box-2 {
-                                                              display: flex;
-                                                              flex-direction: column;
-                                                              flex-basis: 50%;
-                                                          }
-                                                          .content-left {
-                                                              margin: 0;
-                                                              width: 100%;
-                                                          }
-                                                          #left-box {
-                                                              display: flex;
-                                                              flex-direction: row;
-                                                          }
-                                                          #left {
-                                                              background-color: white;
-                                                          }
-                                                          #right-box {
-                                                              margin: 0;
-                                                              width: 100%;
-                                                              display: flex;
-                                                              flex-direction: row;
-                                                              justify-content: space-between;
-                                                          }
-                                                          .right-box-item {
-                                                              flex: 1 1 33.333%;
-                                                              margin: 2%;
-                                                              height: auto;
-                                                          }
-                                                      }
-                                                      /*boîte à gauche*/
-                                                      
-                                                      .content-left {
-                                                          display: flex;
-                                                          flex-direction: column;
-                                                          justify-content: space-between;
-                                                          flex: 65%;
-                                                          margin-right: 3.5%;
-                                                          background-color: #F2F2F2;
-                                                          border-radius: 10px;
-                                                          padding: 1.87%;
-                                                      }
-                                                      
-                                                      .content-left__box {
-                                                          display: flex;
-                                                          flex-direction: column;
-                                                          justify-content: space-between;
-                                                          border-radius: 10%;
-                                                          margin: 0;
-                                                      }
-                                                      
-                                                      .content-left__box-1,
-                                                      .content-left__box-2 {
-                                                          display: flex;
-                                                          justify-content: space-between;
-                                                      }
-                                                      
-                                                      .conten-left__box-element:hover {
-                                                          box-shadow: 2px 2px 20px #0065FC;
-                                                      }
-                                                      
-                                                      .conten-left__box-element {
-                                                          background-color: white;
-                                                          border-radius: 10px;
-                                                          border: 4px solid white;
-                                                          box-shadow: 1px 1px 10px 0 gray;
-                                                          margin: 7%;
-                                                      }
-                                                      
-                                                      .left-box-item {
-                                                          margin: 0;
-                                                          flex: 0 1 33.333%;
-                                                      }
-                                                      
-                                                      .content-left__box-element_image-1 {
-                                                          background: url("images/heberg-small/auberge-la-cannebiere.jpg") no-repeat;
-                                                          background-size: contain;
-                                                          background-position: top;
-                                                      }
-                                                      
-                                                      .content-left__box-element_image-2 {
-                                                          background: url("images/heberg-small/hotel-du-port.jpg") no-repeat;
-                                                          background-size: contain;
-                                                          background-position: top;
-                                                      }
-                                                      
-                                                      .content-left__box-element_image-3 {
-                                                          background: url("images/heberg-small/hotel-les-mouettes.jpg") no-repeat;
-                                                          background-size: contain;
-                                                          background-position: top;
-                                                      }
-                                                      
-                                                      .content-left__box-element_image-4 {
-                                                          background: url("images/heberg-small/hotel-de-la-mer.jpg") no-repeat;
-                                                          background-size: cover;
-                                                          background-position: bottom 30px right;
-                                                      }
-                                                      
-                                                      .content-left__box-element_image-5 {
-                                                          background: url("images/heberg-small/auberge-le-panier.jpg") no-repeat;
-                                                          background-size: contain;
-                                                          background-position: top;
-                                                      }
-                                                      
-                                                      .content-left__box-element_image-6 {
-                                                          background: url("images/heberg-small/hotel-chez-amina.jpg") no-repeat;
-                                                          background-size: cover;
-                                                          background-position: 25% 75%;
-                                                      }
-                                                      /*--les étoiles pour tout le mond*/
-                                                      
-                                                      .fa-star {
-                                                          color: #0065FC;
-                                                          font-size: .8em;
-                                                      }
-                                                      
-                                                      .fa-star-empty {
-                                                          color: #F2F2F2;
-                                                      }
-                                                      /*--"Polaroid" = price + name des hôtels*/
-                                                      
-                                                      .content-left__box_text-element {
-                                                          background-color: white;
-                                                          margin-top: 55%;
-                                                          margin-bottom: 0;
-                                                          font-size: .8em;
-                                                          line-height: 1.5;
-                                                          padding: 3% 3% 0;
-                                                      }
-                                                      
-                                                      .content-left__text-link {
-                                                          margin: 0;
-                                                          padding-top: 3.5%;
-                                                          padding-left: 2.5%;
-                                                      }
-                                                      /*--boîte à droite*/
-                                                      
-                                                      .content-right {
-                                                          flex: 25%;
-                                                          display: flex;
-                                                          flex-direction: column;
-                                                          justify-content: space-between;
-                                                          background-color: #F2F2F2;
-                                                          border-radius: 10px;
-                                                          padding: 2.99%;
-                                                      }
-                                                      
-                                                      .content-right__box {
-                                                          display: flex;
-                                                          flex-direction: column;
-                                                          justify-content: space-between;
-                                                          height: 100%;
-                                                      }
-                                                      
-                                                      .content-right__box-element {
-                                                          background-color: white;
-                                                          border-radius: 10px;
-                                                          border: 4px solid white;
-                                                          box-shadow: 1px 1px 10px 0 gray;
-                                                          display: flex;
-                                                          justify-content: flex-end;
-                                                          margin-top: 12%;
-                                                          width: 100%;
-                                                      }
-                                                      
-                                                      .content-right__box-element:hover {
-                                                          box-shadow: 2px 2px 20px #0065FC;
-                                                      }
-                                                      
-                                                      .content-right__box-element_image-1 {
-                                                          background: url("images/heberg-small/hotel-le-soleil-du-matin.jpg ") no-repeat;
-                                                          background-size: cover;
-                                                          background-position: 25% 75%;
-                                                      }
-                                                      
-                                                      .content-right__box-element_image-2 {
-                                                          background: url("images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg") no-repeat;
-                                                          background-size: contain;
-                                                          background-position: left;
-                                                          ;
-                                                      }
-                                                      
-                                                      .content-right__box-element_image-3 {
-                                                          background: url("images/heberg-small/hotel-tout-bleu-et-blanc.jpg") no-repeat;
-                                                          background-size: cover;
-                                                          background-position: 15% 65%;
-                                                      }
-                                                      
-                                                      .content-right__box_text-element {
-                                                          background-color: white;
-                                                          font-size: .8em;
-                                                          width: 60%;
-                                                          margin: 0;
-                                                          line-height: 1.5;
-                                                          padding: 3% 3% 0;
-                                                      }
-                                                      
-                                                      .fa-chart-line {
-                                                          font-size: 1.2em;
-                                                          margin-left: 0.02%;
-                                                          display: inline-block;
-                                                      }
-                                                      
-                                                      .content_head-title_box {
-                                                          display: flex;
-                                                          justify-content: space-between;
-                                                          position: relative;
-                                                          right: 2%;
-                                                      }
-                                                      
-                                                      .content_head-title {
-                                                          margin: 0;
-                                                          padding-left: 2.5%;
-                                                          padding-bottom: 1.8%;
-                                                          padding-top: 1.8%;
-                                                      }
-                                                      /*---------------------------section activités-------------------------------------------*/
-                                                      
-                                                      @media screen and (max-width:767px) {
-                                                          .container-secondary {
-                                                              max-width: none;
-                                                              padding: 0;
-                                                          }
-                                                          .secondary-block__box-left,
-                                                          .secondary-block__box-right {
-                                                              display: flex;
-                                                              flex-direction: column;
-                                                              justify-content: space-between;
-                                                              margin: 0;
-                                                              flex-basis: 100%;
-                                                          }
-                                                          .secondary-block {
-                                                              display: flex;
-                                                              flex-direction: column;
-                                                              justify-content: space-between;
-                                                              flex: 1 1 100%;
-                                                          }
-                                                          .box-double-image {
-                                                              width: 100%;
-                                                              height: 50%;
-                                                              flex-basis: 100%;
-                                                          }
-                                                          .secondary__box-element {
-                                                              width: 100%;
-                                                              flex-basis: 100%;
-                                                          }
-                                                      }
-                                                      
-                                                      .secondary {
-                                                          display: flex;
-                                                          flex-direction: column;
-                                                          margin: 0;
-                                                          padding-bottom: 4.5%;
-                                                          max-width: 1440px;
-                                                          background-color: teal;
-                                                      }
-                                                      
-                                                      .secondary_head-title {
-                                                          margin: 0;
-                                                          padding-left: 0;
-                                                          text-align: left;
-                                                          padding: 4.3% 0 2.3% 0;
-                                                          background-color: yellow;
-                                                          border-radius: 20px;
-                                                      }
-                                                      
-                                                      .secondary__box-element {
-                                                          height: 100%;
-                                                          border-radius: 10px;
-                                                          box-shadow: 2px 2px 20px 0 #F2F2F2;
-                                                          display: flex;
-                                                          align-items: flex-end;
-                                                      }
-                                                      
-                                                      .secondary__box-element_image-big-1 {
-                                                          background: url("images/activ-small/vieux-port.jpg") no-repeat;
-                                                          background-size: cover;
-                                                      }
-                                                      
-                                                      .secondary__box-element_image-small-1 {
-                                                          background: url("images/activ-small/fort-de-pomegues.jpg") no-repeat;
-                                                          background-size: cover;
-                                                          background-position: center;
-                                                      }
-                                                      
-                                                      .secondary__box-element_image-small-2 {
-                                                          background: url("images/activ-small/ile-du-frioul.jpg") no-repeat;
-                                                          background-size: cover;
-                                                          background-position: center;
-                                                      }
-                                                      
-                                                      .secondary__box-element_image-big-2 {
-                                                          background: url("images/activ-small/parc-national-des-calanques.jpg ") no-repeat;
-                                                          background-size: cover;
-                                                      }
-                                                      
-                                                      .secondary__box-element_image-small-3 {
-                                                          background: url("images/activ-small/notre-dame-de-la-garde.jpg") no-repeat;
-                                                          background-size: cover;
-                                                      }
-                                                      
-                                                      .secondary__box-element_image-small-4 {
-                                                          background: url("images/activ-small/parc-longchamp.jpg") no-repeat;
-                                                          background-size: cover;
-                                                      }
-                                                      
-                                                      .secondary__box_text-element {
-                                                          width: 100%;
-                                                          background-color: white;
-                                                          margin-top: 60%;
-                                                          margin-bottom: 0;
-                                                          padding: 5%;
-                                                          border-bottom-left-radius: 10px;
-                                                          border-bottom-right-radius: 10px;
-                                                      }
-                                                      
-                                                      .one-image,
-                                                      .two-image {
-                                                          padding: 0;
-                                                          border-radius: 10px;
-                                                      }
-                                                      
-                                                      .one-image {
-                                                          width: 50%;
-                                                          margin-right: 3%;
-                                                      }
-                                                      
-                                                      .secondary__box-element:hover {
-                                                          box-shadow: 2px 2px 20px grey;
-                                                      }
-                                                      
-                                                      .secondary__box-element:hover>.secondary__box_text-element {
-                                                          background-color: #F2F2F2;
-                                                      }
-                                                      
-                                                      .box-double-image {
-                                                          display: flex;
-                                                          flex-direction: column;
-                                                          width: 50%;
-                                                          margin-left: 3%;
-                                                      }
-                                                      /*supp*/
-                                                      
-                                                      .item-1 {
-                                                          height: 70%;
-                                                          margin-bottom: 12%;
-                                                      }
-                                                      
-                                                      .item-2 {
-                                                          height: 30%;
-                                                      }
-                                                      
-                                                      .item-3 {
-                                                          height: 40%;
-                                                          margin-bottom: 12%;
-                                                      }
-                                                      
-                                                      .item-4 {
-                                                          height: 60%;
-                                                      }
-                                                      
-                                                      .secondary-block__box-left,
-                                                      .secondary-block__box-right {
-                                                          display: flex;
-                                                          justify-content: space-between;
-                                                          margin: 0;
-                                                          width: 50%;
-                                                      }
-                                                      
-                                                      .secondary-block__box-left {
-                                                          margin-right: 1.5%;
-                                                          background-color: tomato;
-                                                      }
-                                                      
-                                                      .secondary-block__box-right {
-                                                          margin-left: 1.5%;
-                                                          background-color: thistle;
-                                                      }
-                                                      
-                                                      .secondary-block {
-                                                          display: flex;
-                                                          justify-content: space-between;
-                                                          margin: 0;
-                                                          background-color: turquoise;
-                                                      }
-                                                      /*------------------------------------------FOOTER--------------------------------*/
-                                                      /*--pour annuler les parametres par défaut de u-list : */
-                                                      
-                                                      .box-footer__menu {
-                                                          list-style: none;
-                                                          padding: 0;
-                                                          width: 33.333%;
-                                                      }
-                                                      /*flexbox*/
-                                                      
-                                                      .box-footer {
-                                                          display: flex;
-                                                          justify-content: space-around;
-                                                          background-color: #F2F2F2;
-                                                          padding: 3.5%;
-                                                          flex: 1 1 33.333%;
-                                                      }
-                                                      
-                                                      .text_footer {
-                                                          margin-top: 0;
-                                                      }
+             /*police : */
+             
+             @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+             /*toute la mise en page est incluse dans une boîte main-wrapper, je déclare l'apparence générael de la page : */
+             
+             * {
+                 box-sizing: border-box;
+             }
+             
+             body {
+                 font-family: "raleway", sans-serif;
+                 margin: 0;
+             }
+             
+             .main-wrapper {
+                 display: flex;
+                 flex-direction: column;
+                 overflow: hidden;
+                 min-height: 100%;
+                 margin: 0 auto;
+                 padding-left: 3.5%;
+                 padding-right: 3.5%;
+             }
+             
+             @media (max-width:767px) {
+                 .main-wrapper {
+                     padding: 0;
+                     margin: 0;
+                 }
+             }
+             /*--pour unifier les éléments de <form> je déclare : */
+             
+             .search-form__input,
+             .search-form__button {
+                 font-family: "raleway", sans-serif;
+                 font-size: 1em;
+                 font-weight: bold;
+             }
+             
+             .search-form__input {
+                 outline: none;
+             }
+             /*--je déclare l'apparence générale les blocks(boîtes) et les éléments : */
+             
+             .text-smaller {
+                 font-size: .8em;
+             }
+             
+             .text-bolder {
+                 font-weight: bold;
+                 font-size: .8em;
+             }
+             /*--pour les liens <a> : */
+             
+             .link {
+                 text-decoration: none;
+                 color: black;
+             }
+             
+             .link-block {
+                 display: block;
+             }
+             /*--------------------------------------------BARRE de navigation---------------------------------------*/
+             /*--parametres de logo : */
+             
+             .logo_img {
+                 width: 100px;
+                 height: auto;
+             }
+             
+             .menu-nav__item_logo {
+                 display: flex;
+                 align-items: center;
+                 flex-grow: 1;
+             }
+             
+             .menu-nav__item {
+                 border: 2px solid white;
+                 padding: 3.5% 1.7%;
+                 text-align: center;
+             }
+             
+             .menu-nav__item_subscribe {
+                 color: #0065FC;
+             }
+             /*je déclare flexbox de boîte "menu-nav" pour les éléments de la barre de navigation dans le header : */
+             
+             .menu-nav {
+                 display: flex;
+                 padding: 0;
+                 width: 100%;
+             }
+             /*l'apparence dinamique pour .menu-nav : */
+             
+             .menu-nav__item:hover {
+                 color: #0065FC;
+                 border-top: 2px solid #0065FC;
+             }
+             
+             .container-header {
+                 max-width: 1340px;
+             }
+             /* X-Small devices (portrait phones, less than 576px)*/
+             
+             @media (min-width: 254px) and (max-width: 575.98px) {
+                 .container-header {
+                     max-width: 575px;
+                 }
+                 .menu-nav {
+                     display: flex;
+                     flex-wrap: wrap-reverse;
+                 }
+                 .menu-nav__item {
+                     order: -1;
+                     flex: 50%;
+                 }
+                 .menu-nav__item_subscribe {
+                     order: 1;
+                     text-align: right;
+                     flex: 50%;
+                     padding: 10.5% 20px 0 0;
+                 }
+                 .menu-nav__item_logo {
+                     flex: 50%;
+                     padding: 5.5% 0 0 20px;
+                 }
+             }
+             /* Small devices (landscape phones, less than 768px)*/
+             /*---------------------------------------------Section search--------------------------------------*/
+             
+             .head-title__search_title,
+             .head-title__search_text {
+                 margin: 0;
+             }
+             
+             .head-title__search_text {
+                 padding: 1% 0 3%;
+             }
+             /*--la ligne de recherche : */
+             
+             .search {
+                 display: flex;
+                 flex-direction: column;
+                 margin: 0;
+             }
+             
+             .search-form__button_tap {
+                 display: block;
+                 border-top-right-radius: 10px;
+                 border-bottom-right-radius: 10px;
+                 background-color: #0065FC;
+                 border: none;
+                 color: white;
+                 padding: 10px;
+             }
+             
+             .search-form__input_tap {
+                 border-top: 2px solid #F2F2F2;
+                 border-bottom: 2px solid #F2F2F2;
+                 border-left: 2px solid #F2F2F2;
+                 padding: 8px;
+                 border-right: none;
+             }
+             
+             .label-input {
+                 display: inline-block;
+                 display: flex;
+                 align-items: baseline;
+             }
+             
+             .fa-map-marker-alt {
+                 background-color: #F2F2F2;
+                 text-align: center;
+                 width: 32px;
+                 padding: 12px 12px;
+                 border-top-left-radius: 10px;
+                 border-bottom-left-radius: 10px;
+             }
+             /*Flexbox : */
+             
+             .search-form {
+                 display: flex;
+                 align-items: center;
+             }
+             /*--les filters : */
+             
+             .search-form__button_filtres {
+                 display: flex;
+                 align-items: baseline;
+                 border-radius: 40px;
+                 border: 2px solid #F2F2F2;
+                 border-left: none;
+                 background-color: white;
+                 padding: 0;
+                 margin-left: 3%;
+                 padding-right: 14px;
+             }
+             
+             .fa-dog,
+             .fa-heart,
+             .fa-money-bill-wave,
+             .fa-child {
+                 border-radius: 50px;
+                 background-color: #deebff;
+                 color: #0065FC;
+                 margin-right: 14px;
+                 padding: 10px;
+                 width: 37px;
+             }
+             
+             .search-form__button_filtres:hover {
+                 background-color: #0065FC;
+                 color: #F2F2F2;
+                 transform: scale(1.1);
+             }
+             
+             .search-form__button_filtres:hover>.fa-hover {
+                 background-color: #0065FC;
+                 color: #F2F2F2;
+                 padding-left: 15px;
+             }
+             
+             .filtres-form {
+                 display: flex;
+                 align-items: baseline;
+                 margin-top: 2.5%;
+             }
+             
+             .info-search__text {
+                 margin: 0;
+                 padding: 3% 0;
+             }
+             
+             .fa-info {
+                 color: #0065FC;
+                 border: 2px solid #F2F2F2;
+                 margin-right: 3%;
+                 font-size: .8em;
+                 width: 20px;
+                 height: 20px;
+                 border-radius: 50%;
+                 padding: 3px;
+                 padding-left: 5px;
+             }
+             
+             @media (min-width: 254px) and (max-width: 575.98px) {
+                 .container-search {
+                     max-width: 575px;
+                     padding: 0 20px;
+                 }
+                 .head-title__search_text {
+                     padding: 3.3% 0 6.6%;
+                 }
+                 .title {
+                     font-size: 1.4em;
+                 }
+                 .filtres-form {
+                     display: flex;
+                     flex-wrap: wrap;
+                 }
+                 .title-filtres {
+                     flex: 100%;
+                     margin: 6% 0 0;
+                 }
+                 .search-form__button_filtres {
+                     margin: 2.8% 1.9% 1.4% 0;
+                 }
+                 .info-search__text {
+                     padding: 4.9% 0 6.3%;
+                 }
+             }
+             /*--------------------------------------------------Section content--------------------------------------------*/
+             
+             .content {
+                 display: flex;
+                 justify-content: space-between;
+                 margin: 0px auto;
+                 max-width: 1440px;
+             }
+             /*boîte à gauche*/
+             
+             .content-left {
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: space-between;
+                 flex: 65%;
+                 margin-right: 3.5%;
+                 background-color: #F2F2F2;
+                 border-radius: 10px;
+                 padding: 1.87%;
+             }
+             
+             .content-left__box {
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: space-between;
+                 border-radius: 10%;
+                 margin: 0;
+             }
+             
+             .content-left__box-1,
+             .content-left__box-2 {
+                 display: flex;
+                 justify-content: space-between;
+             }
+             
+             .conten-left__box-element:hover {
+                 box-shadow: 2px 2px 20px #0065FC;
+             }
+             
+             .conten-left__box-element {
+                 background-color: white;
+                 border-radius: 10px;
+                 border: 4px solid white;
+                 box-shadow: 1px 1px 10px 0 gray;
+                 margin: 7%;
+             }
+             
+             .left-box-item {
+                 margin: 0;
+                 flex: 0 1 33.333%;
+             }
+             
+             .content-left__box-element_image-1 {
+                 background: url("images/heberg-small/auberge-la-cannebiere.jpg") no-repeat;
+                 background-size: contain;
+                 background-position: top;
+             }
+             
+             .content-left__box-element_image-2 {
+                 background: url("images/heberg-small/hotel-du-port.jpg") no-repeat;
+                 background-size: contain;
+                 background-position: top;
+             }
+             
+             .content-left__box-element_image-3 {
+                 background: url("images/heberg-small/hotel-les-mouettes.jpg") no-repeat;
+                 background-size: contain;
+                 background-position: top;
+             }
+             
+             .content-left__box-element_image-4 {
+                 background: url("images/heberg-small/hotel-de-la-mer.jpg") no-repeat;
+                 background-size: cover;
+                 background-position: bottom 30px right;
+             }
+             
+             .content-left__box-element_image-5 {
+                 background: url("images/heberg-small/auberge-le-panier.jpg") no-repeat;
+                 background-size: contain;
+                 background-position: top;
+             }
+             
+             .content-left__box-element_image-6 {
+                 background: url("images/heberg-small/hotel-chez-amina.jpg") no-repeat;
+                 background-size: cover;
+                 background-position: 25% 75%;
+             }
+             /*--les étoiles pour tout le monde*/
+             
+             .fa-star {
+                 color: #0065FC;
+                 font-size: .8em;
+             }
+             
+             .fa-star-empty {
+                 color: #F2F2F2;
+             }
+             /*--"Polaroid" = price + name des hôtels*/
+             
+             .content-left__box_text-element {
+                 background-color: white;
+                 margin-top: 55%;
+                 margin-bottom: 0;
+                 font-size: .8em;
+                 line-height: 1.5;
+                 padding: 3% 3% 0;
+             }
+             
+             .content-left__text-link {
+                 margin: 0;
+                 padding-top: 3.5%;
+                 padding-left: 2.5%;
+             }
+             /*--boîte à droite*/
+             
+             .content-right {
+                 flex: 25%;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: space-between;
+                 background-color: #F2F2F2;
+                 border-radius: 10px;
+                 padding: 2.99%;
+             }
+             
+             .content-right__box {
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: space-between;
+                 height: 100%;
+             }
+             
+             .content-right__box-element {
+                 background-color: white;
+                 border-radius: 10px;
+                 border: 4px solid white;
+                 box-shadow: 1px 1px 10px 0 gray;
+                 display: flex;
+                 justify-content: flex-end;
+                 margin-top: 12%;
+                 width: 100%;
+             }
+             
+             .content-right__box-element:hover {
+                 box-shadow: 2px 2px 20px #0065FC;
+             }
+             
+             .content-right__box-element_image-1 {
+                 background: url("images/heberg-small/hotel-le-soleil-du-matin.jpg ") no-repeat;
+                 background-size: contain;
+                 background-position: left;
+                 background-origin: border-box;
+             }
+             
+             .content-right__box-element_image-2 {
+                 background: url("images/heberg-small/au-coeur-de-leau-chambres-dhotes.jpg") no-repeat;
+                 background-size: contain;
+                 background-position: left;
+                 ;
+             }
+             
+             .content-right__box-element_image-3 {
+                 background: url("images/heberg-small/hotel-tout-bleu-et-blanc.jpg") no-repeat;
+                 background-size: 40% auto;
+                 background-position: bottom 30% left;
+             }
+             
+             .content-right__box_text-element {
+                 background-color: white;
+                 font-size: .8em;
+                 width: 60%;
+                 margin: 0;
+                 line-height: 1.5;
+                 padding: 3% 3% 0;
+             }
+             
+             .fa-chart-line {
+                 font-size: 1.2em;
+                 margin-left: 0.02%;
+                 display: inline-block;
+             }
+             
+             .content_head-title_box {
+                 display: flex;
+                 justify-content: space-between;
+                 position: relative;
+                 right: 2%;
+             }
+             
+             .content_head-title {
+                 margin: 0;
+                 padding-left: 2.5%;
+                 padding-bottom: 1.8%;
+                 padding-top: 1.8%;
+             }
+             
+             @media (min-width: 254px) and (max-width: 575.98px) {
+                 .container-content {
+                     max-width: 575px;
+                 }
+                 .content {
+                     display: flex;
+                     flex-direction: column-reverse;
+                 }
+                 .content-left {
+                     margin: 0;
+                     background-color: white;
+                 }
+                 .content-right {
+                     border-radius: 0;
+                     padding: 0 20px;
+                 }
+                 .content-left__box-1,
+                 .content-left__box-2 {
+                     display: flex;
+                     flex-direction: column;
+                 }
+                 .content-right__box-element {
+                     margin-top: 11px;
+                     min-height: 145px;
+                 }
+                 .content_head-title {
+                     padding-bottom: 3.5%;
+                 }
+             }
+             /*---------------------------section activités-------------------------------------------*/
+             
+             @media screen and (max-width:767px) {
+                 .container-secondary {
+                     max-width: none;
+                     padding: 0;
+                 }
+                 .secondary-block__box-left,
+                 .secondary-block__box-right {
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: space-between;
+                     margin: 0;
+                     flex-basis: 100%;
+                 }
+                 .secondary-block {
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: space-between;
+                     flex: 1 1 100%;
+                 }
+                 .box-double-image {
+                     width: 100%;
+                     height: 50%;
+                     flex-basis: 100%;
+                 }
+                 .secondary__box-element {
+                     width: 100%;
+                     flex-basis: 100%;
+                 }
+             }
+             
+             .secondary {
+                 display: flex;
+                 flex-direction: column;
+                 margin: 0;
+                 padding-bottom: 4.5%;
+                 max-width: 1440px;
+                 background-color: teal;
+             }
+             
+             .secondary_head-title {
+                 margin: 0;
+                 padding-left: 0;
+                 text-align: left;
+                 padding: 4.3% 0 2.3% 0;
+                 background-color: yellow;
+                 border-radius: 20px;
+             }
+             
+             .secondary__box-element {
+                 height: 100%;
+                 border-radius: 10px;
+                 box-shadow: 2px 2px 20px 0 #F2F2F2;
+                 display: flex;
+                 align-items: flex-end;
+             }
+             
+             .secondary__box-element_image-big-1 {
+                 background: url("images/activ-small/vieux-port.jpg") no-repeat;
+                 background-size: cover;
+             }
+             
+             .secondary__box-element_image-small-1 {
+                 background: url("images/activ-small/fort-de-pomegues.jpg") no-repeat;
+                 background-size: cover;
+                 background-position: center;
+             }
+             
+             .secondary__box-element_image-small-2 {
+                 background: url("images/activ-small/ile-du-frioul.jpg") no-repeat;
+                 background-size: cover;
+                 background-position: center;
+             }
+             
+             .secondary__box-element_image-big-2 {
+                 background: url("images/activ-small/parc-national-des-calanques.jpg ") no-repeat;
+                 background-size: cover;
+             }
+             
+             .secondary__box-element_image-small-3 {
+                 background: url("images/activ-small/notre-dame-de-la-garde.jpg") no-repeat;
+                 background-size: cover;
+             }
+             
+             .secondary__box-element_image-small-4 {
+                 background: url("images/activ-small/parc-longchamp.jpg") no-repeat;
+                 background-size: cover;
+             }
+             
+             .secondary__box_text-element {
+                 width: 100%;
+                 background-color: white;
+                 margin-top: 60%;
+                 margin-bottom: 0;
+                 padding: 5%;
+                 border-bottom-left-radius: 10px;
+                 border-bottom-right-radius: 10px;
+             }
+             
+             .one-image,
+             .two-image {
+                 padding: 0;
+                 border-radius: 10px;
+             }
+             
+             .one-image {
+                 width: 50%;
+                 margin-right: 3%;
+             }
+             
+             .secondary__box-element:hover {
+                 box-shadow: 2px 2px 20px grey;
+             }
+             
+             .secondary__box-element:hover>.secondary__box_text-element {
+                 background-color: #F2F2F2;
+             }
+             
+             .box-double-image {
+                 display: flex;
+                 flex-direction: column;
+                 width: 50%;
+                 margin-left: 3%;
+             }
+             /*supp*/
+             
+             .item-1 {
+                 height: 70%;
+                 margin-bottom: 12%;
+             }
+             
+             .item-2 {
+                 height: 30%;
+             }
+             
+             .item-3 {
+                 height: 40%;
+                 margin-bottom: 12%;
+             }
+             
+             .item-4 {
+                 height: 60%;
+             }
+             
+             .secondary-block__box-left,
+             .secondary-block__box-right {
+                 display: flex;
+                 justify-content: space-between;
+                 margin: 0;
+                 width: 50%;
+             }
+             
+             .secondary-block__box-left {
+                 margin-right: 1.5%;
+                 background-color: tomato;
+             }
+             
+             .secondary-block__box-right {
+                 margin-left: 1.5%;
+                 background-color: thistle;
+             }
+             
+             .secondary-block {
+                 display: flex;
+                 justify-content: space-between;
+                 margin: 0;
+                 background-color: turquoise;
+             }
+             /*------------------------------------------FOOTER--------------------------------*/
+             /*--pour annuler les parametres par défaut de u-list : */
+             
+             .box-footer__menu {
+                 list-style: none;
+                 padding: 0;
+                 width: 33.333%;
+             }
+             /*flexbox*/
+             
+             .box-footer {
+                 display: flex;
+                 justify-content: space-around;
+                 background-color: #F2F2F2;
+                 padding: 3.5%;
+                 flex: 1 1 33.333%;
+             }
+             
+             .text_footer {
+                 margin-top: 0;
+             }

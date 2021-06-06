@@ -21,20 +21,14 @@
             <div class="container-header">
                 <!--conteneur pour Break points-->
 
-                <div class="menu-nav-box">
-                    <!--Flexbox= logo + "menu-nav"-->
-
+                <nav class="menu-nav" role="navigation">
+                    <!--<nav>- joue le role de conteneur pour Flexbox des items de "menu-nav"-->
                     <a href="index.html" class="menu-nav__item_logo link-block"><img src="images/interface/Reservia@3x.png " alt="Reservia " title="Home " class="logo_img " /></a>
+                    <a href="#content-page" class="menu-nav__item  link link-block text">Hébergements</a>
+                    <a href="#secondary-page" class="menu-nav__item link link-block text">Activités</a>
+                    <a href="# " class="menu-nav__item menu-nav__item_subscribe link link-block text"><b>S'inscrire</b></a>
 
-                    <nav class="menu-nav" role="navigation">
-                        <!--<nav>- joue le role de conteneur pour Flexbox des items de "menu-nav"-->
-
-                        <a href="#content-page" class="menu-nav__item  link link-block title">Hébergements</a>
-                        <a href="#secondary-page" class="menu-nav__item link link-block title">Activités</a>
-                        <a href="# " class="menu-nav__item menu-nav__item_subscribe link link-block title"><b>S'inscrire</b></a>
-
-                    </nav>
-                </div>
+                </nav>
 
             </div>
 
@@ -78,7 +72,7 @@
                         <form class="filtres-form">
                             <!--block,Flexbox-->
 
-                            <p><b>Filters</b></p>
+                            <p class="title-filtres"><b>Filters</b></p>
                             <button type="submit" class="search-form__button search-form__button_filtres"><i class="fas fa-money-bill-wave fa-hover"></i>Economique</button>
                             <button type="submit" class="search-form__button search-form__button_filtres"><i class="fas fa-child fa-hover"></i>Familial</button>
                             <button type="submit" class="search-form__button search-form__button_filtres"><i class="fas fa-heart fa-hover"></i>Romantique</button>
@@ -104,12 +98,12 @@
                     <div class="content">
                         <!--block,flexbox -->
 
-                        <div class="content-left" id="left">
+                        <div class="content-left">
                             <!--flexbox= "title" + "content-left__box" + "content-left__text-link"-->
 
                             <h3 class="title content_head-title ">Hébergements à Marseille</h3>
 
-                            <div class="content-left__box" id="left-box">
+                            <div class="content-left__box">
                                 <!--block,flexbox,-->
                                 <div class="content-left__box-1">
 
@@ -165,7 +159,7 @@
                         <div class="content-right">
                             <!--block-->
 
-                            <h3 class="content_head-title title content_head-title_box test">Les plus populaires<i class="fas fa-chart-line test"></i></h3>
+                            <h3 class="content_head-title title content_head-title_box">Les plus populaires<i class="fas fa-chart-line test"></i></h3>
 
                             <!-- block-->
 
