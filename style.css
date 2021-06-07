@@ -21,6 +21,7 @@
       margin: 0 auto;
       padding-left: 3.5%;
       padding-right: 3.5%;
+      background-color: white;
   }
   /*--pour unifier les éléments de <form> je déclare : */
   
@@ -61,7 +62,7 @@
       }
   }
   
-  @media (max-width: 767.98px) {
+  @media (max-width: 991.98px) {
       .main-wrapper {
           padding: 0;
       }
@@ -108,7 +109,7 @@
   }
   /* X-Small devices (portrait phones, less than 576px)*/
   
-  @media (min-width: 254px) and (max-width: 575.98px) {
+  @media (max-width: 575.98px) {
       .container-header {
           max-width: 575px;
       }
@@ -125,11 +126,11 @@
           order: 1;
           text-align: right;
           flex: 50%;
-          padding: 10.5% 20px 0 0;
+          padding: 35px 20px 20px;
       }
       .menu-nav__item_logo {
           flex: 50%;
-          padding: 5.5% 0 0 20px;
+          padding: 5.5% 20px 10px;
       }
       .menu-nav__item:hover {
           color: #0065FC;
@@ -141,7 +142,7 @@
       }
   }
   
-  @media (min-width: 576px) and (max-width: 767.98px) {
+  @media (min-width: 576px) and (max-width: 991.98px) {
       .container-header {
           padding: 0 20px;
       }
@@ -271,7 +272,7 @@
       right: 2%;
   }
   
-  @media (min-width: 254px) and (max-width: 575.98px) {
+  @media (max-width: 575.98px) {
       .container-search {
           max-width: 575px;
           padding: 0 20px;
@@ -291,7 +292,7 @@
       }
       .title-filtres {
           flex: 100%;
-          margin: 37px 0 22px;
+          margin: 37px 0 15px;
       }
       .search-form__button_filtres {
           margin: 2.8% 5% 1.4% 0;
@@ -313,18 +314,22 @@
           background-color: #0065FC;
           color: white;
           padding: 12px;
-          border-top-right-radius: 10px;
-          border-bottom-right-radius: 10px;
+          border-radius: 10px;
       }
       .search-form {
           margin: 0 auto;
       }
+      .label-input,
+      .search-form__input_tap,
+      .search-form {
+          width: 100%;
+      }
   }
   
-  @media (min-width: 576px) and (max-width: 767.98px) {
+  @media (min-width: 576px) and (max-width: 991.98px) {
       .container-search {
           padding: 0 20px;
-          max-width: 767px;
+          max-width: 991px;
       }
       .title {
           font-size: 1.4em;
@@ -533,7 +538,7 @@
       padding-top: 1.8%;
   }
   
-  @media (min-width: 254px) and (max-width: 575.98px) {
+  @media (max-width: 575.98px) {
       .container-content {
           max-width: 575px;
       }
@@ -572,11 +577,12 @@
           padding: 0 0 20px;
       }
   }
-  /*landscape*/
+  /*landscape + IPad portrait*/
   
-  @media (min-width: 576px) and (max-width: 767.98px) {
+  @media (min-width: 576px) and (max-width: 991.98px) {
       .container-content {
-          max-width: 767px;
+          max-width: 991.98px;
+          padding: 0;
       }
       .content {
           display: flex;
@@ -603,6 +609,7 @@
       .content-right__box-element {
           height: 220px;
           display: flex;
+          margin: 0;
       }
       .content-right__box_text-element {
           width: 100%;
@@ -785,7 +792,7 @@
       margin: 0;
   }
   
-  @media (min-width: 254px) and (max-width: 575.98px) {
+  @media (max-width: 575.98px) {
       .container-secondary {
           max-width: 575px;
           padding: 0 20px 10px;
@@ -824,10 +831,10 @@
   }
   /*landscape*/
   
-  @media (min-width: 576px) and (max-width: 767.98px) {
+  @media (min-width: 576px) and (max-width: 991.98px) {
       .container-secondary {
           padding: 0 20px 30px;
-          max-width: 767px;
+          max-width: 991px;
       }
       .secondary-block {
           display: flex;
@@ -856,6 +863,9 @@
       .item-4 {
           height: 50%;
       }
+      .secondary {
+          padding-bottom: 0;
+      }
   }
   /*------------------------------------------FOOTER--------------------------------*/
   /*--pour annuler les parametres par défaut de u-list : */
@@ -879,7 +889,7 @@
       margin-top: 0;
   }
   
-  @media (min-width: 254px) and (max-width: 575.98px) {
+  @media (max-width: 575.98px) {
       .container-footer {
           max-width: 575px;
       }
@@ -894,6 +904,24 @@
       .box-footer__menu {
           flex: 100%;
           width: 100%;
-          ;
+      }
+  }
+  /*landscape + IPad portrait*/
+  
+  @media (min-width: 576px) and (max-width: 991.98px) {
+      .container-footer {
+          max-width: 991px;
+      }
+      .box-footer {
+          padding: 30px 20px;
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          flex: 100%;
+          min-height: 100px;
+      }
+      .box-footer__menu {
+          flex: 100%;
+          width: 100%;
       }
   }
