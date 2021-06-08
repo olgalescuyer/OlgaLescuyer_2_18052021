@@ -370,7 +370,6 @@
   .content-left {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       flex: 65%;
       margin-right: 3.5%;
       background-color: #F2F2F2;
@@ -737,7 +736,7 @@
   .secondary__box-element_image-small-4 {
       background: url("images/activ-small/parc-longchamp.jpg") no-repeat;
       background-size: cover;
-      background-position: top;
+      background-position: center;
   }
   
   .secondary__box_text-element {
@@ -919,9 +918,7 @@
   }
   
   .text-smaller:hover {
-      text-decoration: underline;
       color: #0065FC;
-      font-weight: bolder;
   }
   
   @media (max-width: 575.98px) {
