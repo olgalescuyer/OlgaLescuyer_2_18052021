@@ -914,9 +914,8 @@
   }
   
   .text_footer {
-      margin-top: 0;
+      margin: 0 0 15px;
       font-size: 1em;
-      margin-bottom: 10px;
   }
   
   .text-smaller:hover {
