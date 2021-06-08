@@ -916,6 +916,7 @@
   .text_footer {
       margin-top: 0;
       font-size: 1em;
+      margin-bottom: 10px;
   }
   
   .text-smaller:hover {
