@@ -361,7 +361,6 @@
   
   .content {
       display: flex;
-      justify-content: space-between;
       margin: 0px auto;
       max-width: 1440px;
   }
