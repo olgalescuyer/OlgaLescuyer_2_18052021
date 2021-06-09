@@ -931,7 +931,7 @@
           max-width: 575px;
       }
       .box-footer {
-          padding: 50px 20px;
+          padding: 50px 25px;
           display: flex;
           flex-direction: column;
           width: 100%;
@@ -957,7 +957,7 @@
           max-width: 991px;
       }
       .box-footer {
-          padding: 30px 20px;
+          padding: 30px 25px;
           display: flex;
           flex-direction: row;
           width: 100%;
