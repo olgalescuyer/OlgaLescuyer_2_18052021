@@ -730,7 +730,7 @@
   .secondary__box-element_image-small-3 {
       background: url("images/activ-small/notre-dame-de-la-garde.jpg") no-repeat;
       background-size: cover;
-      background-position: top;
+      background-position: center;
   }
   
   .secondary__box-element_image-small-4 {
@@ -896,6 +896,11 @@
   }
   /*------------------------------------------FOOTER--------------------------------*/
   /*--pour annuler les parametres par défaut de u-list : */
+  
+  .container-footer {
+      max-width: 1440px;
+      margin: 0 auto;
+  }
   
   .box-footer__menu {
       list-style: none;
